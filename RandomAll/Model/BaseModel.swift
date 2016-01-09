@@ -8,7 +8,6 @@
 
 import UIKit
 import RealmSwift
-import SwiftyJSON
 class BaseModel: Object {
 
   class func findOrNewByPrimaryKey(value: AnyObject, primaryKey: String = "id") -> Self {
@@ -29,7 +28,7 @@ class BaseModel: Object {
   class func objectForPrimaryKey(value: AnyObject) -> Self? {
     do {
       return try Realm().objectForPrimaryKey(self, key: value)
-    }catch {
+    } catch {
       return nil
     }
   }

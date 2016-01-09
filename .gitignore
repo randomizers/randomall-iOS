@@ -10,3 +10,4 @@ Pods
 .swiftlint.yml
 .ruby-version
 RandomAll.xcworkspace/xcuserdata/buubui.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+RandomAll/Helper/Credentials.swift

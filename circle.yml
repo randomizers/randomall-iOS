@@ -15,6 +15,7 @@ dependencies:
 checkout:
   post:
     - rm /tmp/test_realm_path.realm || true
+    - cp ./RandomAll/Helper/Credentials.swift.example  ./RandomAll/Helper/Credentials.swift
 test:
   override:
     - set -o pipefail &&
