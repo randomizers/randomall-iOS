@@ -1,0 +1,8 @@
+ci_service: circleci
+coverage_service: coveralls
+xcodeproj: RandomAll.xcodeproj
+source_directory: ./
+ignore:
+  - Pods/*
+  - RandomAllTests/*
+  - ../**/*/Xcode*
