@@ -16,14 +16,20 @@
 		02928FE51C40B8DD001E8796 /* BaseSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FE41C40B8DD001E8796 /* BaseSpec.swift */; settings = {ASSET_TAGS = (); }; };
 		02928FE71C40B93C001E8796 /* SampleUnitTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FE61C40B93C001E8796 /* SampleUnitTest.swift */; settings = {ASSET_TAGS = (); }; };
 		02928FE91C40BD45001E8796 /* BaseTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FE81C40BD45001E8796 /* BaseTestCase.swift */; settings = {ASSET_TAGS = (); }; };
-		02928FEB1C40BDB9001E8796 /* SampleIntegrationTest.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FEA1C40BDB9001E8796 /* SampleIntegrationTest.swift */; settings = {ASSET_TAGS = (); }; };
-		02928FF11C40C32C001E8796 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02928FEE1C40C32C001E8796 /* HockeySDK.framework */; settings = {ASSET_TAGS = (); }; };
-		02928FF21C40C32C001E8796 /* HockeySDKResources.bundle in Resources */ = {isa = PBXBuildFile; fileRef = 02928FF01C40C32C001E8796 /* HockeySDKResources.bundle */; settings = {ASSET_TAGS = (); }; };
-		02928FF31C40C427001E8796 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02928FEE1C40C32C001E8796 /* HockeySDK.framework */; };
 		02928FF61C40C600001E8796 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FF41C40C600001E8796 /* Helper.swift */; settings = {ASSET_TAGS = (); }; };
 		02928FF71C40C600001E8796 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FF51C40C600001E8796 /* Credentials.swift */; settings = {ASSET_TAGS = (); }; };
 		02928FFB1C40D102001E8796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FFA1C40D102001E8796 /* User.swift */; settings = {ASSET_TAGS = (); }; };
 		02E1C7FC1C40E1B700EC4B1A /* Yorkville.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */; settings = {ASSET_TAGS = (); }; };
+		02E1C7FE1C40F56400EC4B1A /* SelectTypeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C7FD1C40F56400EC4B1A /* SelectTypeViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C8061C40F88C00EC4B1A /* Color.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C8001C40F88C00EC4B1A /* Color.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C8071C40F88C00EC4B1A /* Metric.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C8011C40F88C00EC4B1A /* Metric.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C80B1C40F88C00EC4B1A /* Style.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C8051C40F88C00EC4B1A /* Style.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C80F1C40F96700EC4B1A /* BaseViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C80E1C40F96700EC4B1A /* BaseViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C8111C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C8101C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C8161C40FE8C00EC4B1A /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02E1C8131C40FE7F00EC4B1A /* HockeySDK.framework */; };
+		02E1C8181C41027300EC4B1A /* SetupViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C8171C41027300EC4B1A /* SetupViewController.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C81B1C4103A500EC4B1A /* BlueTypeButton.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C81A1C4103A500EC4B1A /* BlueTypeButton.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C81D1C41061800EC4B1A /* Storyboard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E1C81C1C41061800EC4B1A /* Storyboard.swift */; settings = {ASSET_TAGS = (); }; };
 		7894935C6C05EB7EB4EEC038 /* Pods_RandomAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF9438348D961A8403E9F07 /* Pods_RandomAll.framework */; };
 		8BE815D4C5EE300FAB714394 /* Pods_RandomAllTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */; };
 		EE0EC614F943D45E526D9B81 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889299F7BBFF3F89623F978D /* Pods.framework */; };
@@ -53,14 +59,22 @@
 		02928FE41C40B8DD001E8796 /* BaseSpec.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseSpec.swift; sourceTree = "<group>"; };
 		02928FE61C40B93C001E8796 /* SampleUnitTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleUnitTest.swift; sourceTree = "<group>"; };
 		02928FE81C40BD45001E8796 /* BaseTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseTestCase.swift; sourceTree = "<group>"; };
-		02928FEA1C40BDB9001E8796 /* SampleIntegrationTest.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SampleIntegrationTest.swift; sourceTree = "<group>"; };
-		02928FEE1C40C32C001E8796 /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
-		02928FF01C40C32C001E8796 /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
 		02928FF41C40C600001E8796 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		02928FF51C40C600001E8796 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		02928FF81C40C782001E8796 /* Credentials.swift.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credentials.swift.example; sourceTree = "<group>"; };
 		02928FFA1C40D102001E8796 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yorkville.ttf; sourceTree = "<group>"; };
+		02E1C7FD1C40F56400EC4B1A /* SelectTypeViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTypeViewController.swift; sourceTree = "<group>"; };
+		02E1C8001C40F88C00EC4B1A /* Color.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Color.swift; sourceTree = "<group>"; };
+		02E1C8011C40F88C00EC4B1A /* Metric.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Metric.swift; sourceTree = "<group>"; };
+		02E1C8051C40F88C00EC4B1A /* Style.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Style.swift; sourceTree = "<group>"; };
+		02E1C80E1C40F96700EC4B1A /* BaseViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BaseViewController.swift; sourceTree = "<group>"; };
+		02E1C8101C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SelectTypeScreenTestCase.swift; sourceTree = "<group>"; };
+		02E1C8131C40FE7F00EC4B1A /* HockeySDK.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = HockeySDK.framework; sourceTree = "<group>"; };
+		02E1C8151C40FE7F00EC4B1A /* HockeySDKResources.bundle */ = {isa = PBXFileReference; lastKnownFileType = "wrapper.plug-in"; path = HockeySDKResources.bundle; sourceTree = "<group>"; };
+		02E1C8171C41027300EC4B1A /* SetupViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SetupViewController.swift; sourceTree = "<group>"; };
+		02E1C81A1C4103A500EC4B1A /* BlueTypeButton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = BlueTypeButton.swift; sourceTree = "<group>"; };
+		02E1C81C1C41061800EC4B1A /* Storyboard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Storyboard.swift; sourceTree = "<group>"; };
 		1042EAD4A2555975600ACC2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomAllTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C160FB0AA36B08E837D706 /* Pods-RandomAllTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAllTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomAllTests/Pods-RandomAllTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -77,7 +91,7 @@
 			files = (
 				EE0EC614F943D45E526D9B81 /* Pods.framework in Frameworks */,
 				7894935C6C05EB7EB4EEC038 /* Pods_RandomAll.framework in Frameworks */,
-				02928FF31C40C427001E8796 /* HockeySDK.framework in Frameworks */,
+				02E1C8161C40FE8C00EC4B1A /* HockeySDK.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -85,7 +99,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02928FF11C40C32C001E8796 /* HockeySDK.framework in Frameworks */,
 				8BE815D4C5EE300FAB714394 /* Pods_RandomAllTests.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -116,6 +129,8 @@
 		02928FBB1C40B138001E8796 /* RandomAll */ = {
 			isa = PBXGroup;
 			children = (
+				02E1C8191C41038C00EC4B1A /* View */,
+				02E1C7FF1C40F88C00EC4B1A /* Style */,
 				02E1C7FA1C40E1A300EC4B1A /* Resource */,
 				02928FDF1C40B429001E8796 /* Helper */,
 				02928FDE1C40B410001E8796 /* Controller */,
@@ -152,6 +167,9 @@
 		02928FDE1C40B410001E8796 /* Controller */ = {
 			isa = PBXGroup;
 			children = (
+				02E1C80E1C40F96700EC4B1A /* BaseViewController.swift */,
+				02E1C7FD1C40F56400EC4B1A /* SelectTypeViewController.swift */,
+				02E1C8171C41027300EC4B1A /* SetupViewController.swift */,
 			);
 			path = Controller;
 			sourceTree = "<group>";
@@ -159,6 +177,7 @@
 		02928FDF1C40B429001E8796 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				02E1C81C1C41061800EC4B1A /* Storyboard.swift */,
 				02928FF81C40C782001E8796 /* Credentials.swift.example */,
 				02928FF41C40C600001E8796 /* Helper.swift */,
 				02928FF51C40C600001E8796 /* Credentials.swift */,
@@ -179,27 +198,9 @@
 			isa = PBXGroup;
 			children = (
 				02928FE81C40BD45001E8796 /* BaseTestCase.swift */,
-				02928FEA1C40BDB9001E8796 /* SampleIntegrationTest.swift */,
+				02E1C8101C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift */,
 			);
 			path = IntegrationTest;
-			sourceTree = "<group>";
-		};
-		02928FED1C40C32C001E8796 /* HockeySDK.embeddedframework */ = {
-			isa = PBXGroup;
-			children = (
-				02928FEE1C40C32C001E8796 /* HockeySDK.framework */,
-				02928FEF1C40C32C001E8796 /* Resources */,
-			);
-			name = HockeySDK.embeddedframework;
-			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
-			sourceTree = "<group>";
-		};
-		02928FEF1C40C32C001E8796 /* Resources */ = {
-			isa = PBXGroup;
-			children = (
-				02928FF01C40C32C001E8796 /* HockeySDKResources.bundle */,
-			);
-			path = Resources;
 			sourceTree = "<group>";
 		};
 		02E1C7FA1C40E1A300EC4B1A /* Resource */ = {
@@ -208,6 +209,42 @@
 				02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		02E1C7FF1C40F88C00EC4B1A /* Style */ = {
+			isa = PBXGroup;
+			children = (
+				02E1C8001C40F88C00EC4B1A /* Color.swift */,
+				02E1C8011C40F88C00EC4B1A /* Metric.swift */,
+				02E1C8051C40F88C00EC4B1A /* Style.swift */,
+			);
+			path = Style;
+			sourceTree = "<group>";
+		};
+		02E1C8121C40FE7F00EC4B1A /* HockeySDK.embeddedframework */ = {
+			isa = PBXGroup;
+			children = (
+				02E1C8131C40FE7F00EC4B1A /* HockeySDK.framework */,
+				02E1C8141C40FE7F00EC4B1A /* Resources */,
+			);
+			name = HockeySDK.embeddedframework;
+			path = "HockeySDK-iOS/HockeySDK.embeddedframework";
+			sourceTree = "<group>";
+		};
+		02E1C8141C40FE7F00EC4B1A /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				02E1C8151C40FE7F00EC4B1A /* HockeySDKResources.bundle */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		02E1C8191C41038C00EC4B1A /* View */ = {
+			isa = PBXGroup;
+			children = (
+				02E1C81A1C4103A500EC4B1A /* BlueTypeButton.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		40A019F2E249E8BE0CE2A9A2 /* Pods */ = {
@@ -224,7 +261,7 @@
 		EDDF15D422A128CBB6024B90 /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				02928FED1C40C32C001E8796 /* HockeySDK.embeddedframework */,
+				02E1C8121C40FE7F00EC4B1A /* HockeySDK.embeddedframework */,
 				889299F7BBFF3F89623F978D /* Pods.framework */,
 				BFF9438348D961A8403E9F07 /* Pods_RandomAll.framework */,
 				2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */,
@@ -331,7 +368,6 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02928FF21C40C32C001E8796 /* HockeySDKResources.bundle in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -463,10 +499,18 @@
 			buildActionMask = 2147483647;
 			files = (
 				02928FE11C40B68E001E8796 /* BaseModel.swift in Sources */,
+				02E1C7FE1C40F56400EC4B1A /* SelectTypeViewController.swift in Sources */,
+				02E1C80F1C40F96700EC4B1A /* BaseViewController.swift in Sources */,
 				02928FBF1C40B138001E8796 /* ViewController.swift in Sources */,
+				02E1C8181C41027300EC4B1A /* SetupViewController.swift in Sources */,
 				02928FFB1C40D102001E8796 /* User.swift in Sources */,
+				02E1C80B1C40F88C00EC4B1A /* Style.swift in Sources */,
 				02928FF71C40C600001E8796 /* Credentials.swift in Sources */,
+				02E1C8061C40F88C00EC4B1A /* Color.swift in Sources */,
+				02E1C8071C40F88C00EC4B1A /* Metric.swift in Sources */,
+				02E1C81D1C41061800EC4B1A /* Storyboard.swift in Sources */,
 				02928FBD1C40B138001E8796 /* AppDelegate.swift in Sources */,
+				02E1C81B1C4103A500EC4B1A /* BlueTypeButton.swift in Sources */,
 				02928FF61C40C600001E8796 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -475,10 +519,10 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02928FEB1C40BDB9001E8796 /* SampleIntegrationTest.swift in Sources */,
 				02928FE51C40B8DD001E8796 /* BaseSpec.swift in Sources */,
 				02928FE91C40BD45001E8796 /* BaseTestCase.swift in Sources */,
 				02928FE71C40B93C001E8796 /* SampleUnitTest.swift in Sources */,
+				02E1C8111C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

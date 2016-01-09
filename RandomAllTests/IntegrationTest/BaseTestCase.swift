@@ -11,7 +11,6 @@ import Foundation
 import KIF
 import Nimble
 import RealmSwift
-import OHHTTPStubs
 import CoreLocation
 import SwiftyJSON
 

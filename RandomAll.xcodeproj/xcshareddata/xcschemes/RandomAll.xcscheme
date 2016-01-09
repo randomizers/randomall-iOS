@@ -20,6 +20,20 @@
                ReferencedContainer = "container:RandomAll.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>
+         <BuildActionEntry
+            buildForTesting = "YES"
+            buildForRunning = "YES"
+            buildForProfiling = "NO"
+            buildForArchiving = "NO"
+            buildForAnalyzing = "NO">
+            <BuildableReference
+               BuildableIdentifier = "primary"
+               BlueprintIdentifier = "02928FCC1C40B138001E8796"
+               BuildableName = "RandomAllTests.xctest"
+               BlueprintName = "RandomAllTests"
+               ReferencedContainer = "container:RandomAll.xcodeproj">
+            </BuildableReference>
+         </BuildActionEntry>
       </BuildActionEntries>
    </BuildAction>
    <TestAction

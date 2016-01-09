@@ -1,25 +1,389 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="6211" systemVersion="14A298i" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="TII-5s-hak">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6204"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Randomizer-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController title="Randomizer" id="BYZ-38-t0r" customClass="SelectTypeViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Oqv-R0-GTC">
+                                <rect key="frame" x="472" y="371" width="128" height="165"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="9EI-N5-qKJ"/>
+                                    <constraint firstAttribute="width" secondItem="Oqv-R0-GTC" secondAttribute="height" multiplier="1041:1338" id="Yqr-bX-qoV"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2VI-nX-U2m">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RKp-Tx-GYL" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87a-jk-qMH">
+                                                <rect key="frame" x="20" y="8" width="560" height="93"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="93" id="nte-WP-PBm"/>
+                                                </constraints>
+                                                <string key="text">How do you want
+to randomize?</string>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="gdt-JS-dSD" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="108" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.29019607843137252" green="0.56470588235294117" blue="0.88627450980392153" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="AJT-Z0-Ufj"/>
+                                                    <constraint firstAttribute="height" constant="45" id="XVR-r9-VFL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Players"/>
+                                                <connections>
+                                                    <action selector="playerButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="hCL-fs-P0t"/>
+                                                </connections>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmk-yn-AEk" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="219" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="TMb-P5-XwJ"/>
+                                                    <constraint firstAttribute="height" constant="45" id="gKl-Gs-Nte"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Teams"/>
+                                                <connections>
+                                                    <action selector="teamButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="bVb-i2-oCs"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-dr-llm">
+                                                <rect key="frame" x="8" y="159" width="584" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="4UF-lc-Iga"/>
+                                                </constraints>
+                                                <string key="text">A simple list of players to randomize 
+their order</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN2-35-88p">
+                                                <rect key="frame" x="8" y="278" width="584" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="Awf-vr-SB7"/>
+                                                </constraints>
+                                                <string key="text">A list of players to randomize them 
+into different teams</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRM-tF-a35" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="341" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="ipb-86-GNY"/>
+                                                    <constraint firstAttribute="width" constant="150" id="lXA-rO-jeh"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Groups"/>
+                                                <connections>
+                                                    <action selector="groupsButtonClicked:" destination="BYZ-38-t0r" eventType="touchUpInside" id="6hU-PH-Srg"/>
+                                                </connections>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-uT-phk">
+                                                <rect key="frame" x="189" y="400" width="223" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="4vc-Im-iwg"/>
+                                                    <constraint firstAttribute="width" constant="223" id="MDn-tK-j0P"/>
+                                                </constraints>
+                                                <string key="text">A list of teams to randomize 
+them into different groups</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="dvp-dr-llm" firstAttribute="top" secondItem="gdt-JS-dSD" secondAttribute="bottom" constant="6" id="2Hp-NX-7RR"/>
+                                            <constraint firstItem="KN2-35-88p" firstAttribute="leading" secondItem="RKp-Tx-GYL" secondAttribute="leading" constant="8" id="2l2-7i-Uwh"/>
+                                            <constraint firstItem="87a-jk-qMH" firstAttribute="top" secondItem="RKp-Tx-GYL" secondAttribute="top" constant="8" id="3fd-UP-Mpq"/>
+                                            <constraint firstItem="iRM-tF-a35" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="DT4-6E-4TZ"/>
+                                            <constraint firstItem="gdt-JS-dSD" firstAttribute="top" secondItem="87a-jk-qMH" secondAttribute="bottom" constant="7" id="FSJ-0Z-8Nv"/>
+                                            <constraint firstItem="dvp-dr-llm" firstAttribute="leading" secondItem="RKp-Tx-GYL" secondAttribute="leading" constant="8" id="G3O-1D-no5"/>
+                                            <constraint firstItem="kmk-yn-AEk" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="G91-sa-ZZb"/>
+                                            <constraint firstAttribute="trailing" secondItem="KN2-35-88p" secondAttribute="trailing" constant="8" id="MHs-Kv-mFq"/>
+                                            <constraint firstItem="w7n-uT-phk" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="Phm-aq-azY"/>
+                                            <constraint firstItem="w7n-uT-phk" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="QZC-MU-DIq"/>
+                                            <constraint firstAttribute="trailing" secondItem="dvp-dr-llm" secondAttribute="trailing" constant="8" id="Rbq-te-H7G"/>
+                                            <constraint firstItem="gdt-JS-dSD" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="U1I-Yi-eUr"/>
+                                            <constraint firstItem="kmk-yn-AEk" firstAttribute="top" secondItem="dvp-dr-llm" secondAttribute="bottom" constant="2" id="Vf6-7z-LLg"/>
+                                            <constraint firstItem="KN2-35-88p" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="dUG-W6-8UJ"/>
+                                            <constraint firstItem="KN2-35-88p" firstAttribute="top" secondItem="kmk-yn-AEk" secondAttribute="bottom" constant="14" id="dkJ-Nr-zLi"/>
+                                            <constraint firstItem="iRM-tF-a35" firstAttribute="top" secondItem="KN2-35-88p" secondAttribute="bottom" constant="5" id="hqk-id-nln"/>
+                                            <constraint firstItem="w7n-uT-phk" firstAttribute="top" secondItem="iRM-tF-a35" secondAttribute="bottom" constant="14" id="on9-bm-Da9"/>
+                                            <constraint firstAttribute="trailing" secondItem="87a-jk-qMH" secondAttribute="trailing" constant="20" id="vRY-w6-Ste"/>
+                                            <constraint firstItem="87a-jk-qMH" firstAttribute="leading" secondItem="RKp-Tx-GYL" secondAttribute="leading" constant="20" id="zxh-Mb-OAN"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="RKp-Tx-GYL" secondAttribute="bottom" id="7f4-Kp-p87"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="width" secondItem="2VI-nX-U2m" secondAttribute="width" id="98t-QJ-X1g"/>
+                                    <constraint firstAttribute="trailing" secondItem="RKp-Tx-GYL" secondAttribute="trailing" id="M4y-So-qBU"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="centerY" secondItem="2VI-nX-U2m" secondAttribute="centerY" id="RXS-EH-8W6"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="height" secondItem="2VI-nX-U2m" secondAttribute="height" id="g1I-Rl-iZH"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="leading" secondItem="2VI-nX-U2m" secondAttribute="leading" id="rPv-zD-Mct"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="top" secondItem="2VI-nX-U2m" secondAttribute="top" id="vgK-Pi-JVx"/>
+                                    <constraint firstItem="RKp-Tx-GYL" firstAttribute="centerX" secondItem="2VI-nX-U2m" secondAttribute="centerX" id="yMP-L6-VTv"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="2VI-nX-U2m" secondAttribute="trailing" id="8cu-Ql-u9h"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="Oqv-R0-GTC" secondAttribute="bottom" id="Upo-An-pfI"/>
+                            <constraint firstItem="2VI-nX-U2m" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="XKq-eW-MAI"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="2VI-nX-U2m" secondAttribute="bottom" id="pG8-3g-4y6"/>
+                            <constraint firstItem="Oqv-R0-GTC" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="w7n-uT-phk" secondAttribute="trailing" id="t4d-jG-Mcc"/>
+                            <constraint firstAttribute="trailing" secondItem="Oqv-R0-GTC" secondAttribute="trailing" id="umu-9n-84U"/>
+                            <constraint firstItem="2VI-nX-U2m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v7r-BD-ueT"/>
+                        </constraints>
                     </view>
+                    <navigationItem key="navigationItem" title="Randomizer" id="0pL-bQ-3Nx"/>
+                    <connections>
+                        <outlet property="contentView" destination="RKp-Tx-GYL" id="zxM-UG-8PQ"/>
+                        <outlet property="groupButton" destination="iRM-tF-a35" id="tUq-op-kNG"/>
+                        <outlet property="playerButton" destination="gdt-JS-dSD" id="LKX-R2-bgc"/>
+                        <outlet property="scrollView" destination="2VI-nX-U2m" id="9Rv-3Z-jNh"/>
+                        <outlet property="teamButton" destination="kmk-yn-AEk" id="3zs-IO-WKs"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="1161" y="433"/>
+        </scene>
+        <!--Randomizer-->
+        <scene sceneID="8el-f7-E3H">
+            <objects>
+                <navigationController title="Randomizer" automaticallyAdjustsScrollViewInsets="NO" id="TII-5s-hak" sceneMemberID="viewController">
+                    <toolbarItems/>
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" translucent="NO" backIndicatorImage="Arrow.png" id="4Rt-wZ-R3g">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                        <animations/>
+                        <color key="barTintColor" red="0.30980392156862746" green="0.60392156862745094" blue="0.52549019607843139" alpha="1" colorSpace="calibratedRGB"/>
+                        <textAttributes key="titleTextAttributes">
+                            <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
+                            <color key="textColor" red="0.31372549019607843" green="0.8901960784313725" blue="0.76078431372549016" alpha="1" colorSpace="calibratedRGB"/>
+                        </textAttributes>
+                    </navigationBar>
+                    <nil name="viewControllers"/>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U6s-qf-b1h"/>
+                        <segue destination="Qtp-5A-F45" kind="show" id="qvr-vT-npj"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ARa-KH-3zS" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="480" y="433"/>
+        </scene>
+        <!--Setup Screen-->
+        <scene sceneID="MKE-5l-2Vq">
+            <objects>
+                <viewController storyboardIdentifier="setup_view_controller" title="Randomizer" id="Qtp-5A-F45" userLabel="Setup Screen" customClass="SetupViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="xyt-tA-m4Y"/>
+                        <viewControllerLayoutGuide type="bottom" id="7nG-gE-FBe"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="kzG-E4-uaF">
+                        <rect key="frame" x="0.0" y="64" width="600" height="536"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="wBy-Mj-QRA">
+                                <rect key="frame" x="472" y="371" width="128" height="165"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="wBy-Mj-QRA" secondAttribute="height" multiplier="1041:1338" id="4V2-Br-o0h"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="128" id="kYz-S7-ucs"/>
+                                </constraints>
+                            </imageView>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="IkT-tu-jti">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                <subviews>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zyi-gi-efk" userLabel="Content View">
+                                        <rect key="frame" x="0.0" y="0.0" width="600" height="536"/>
+                                        <subviews>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="miU-M2-POo">
+                                                <rect key="frame" x="20" y="8" width="560" height="93"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="93" id="x34-c0-lAY"/>
+                                                </constraints>
+                                                <string key="text">How do you want
+to randomize?</string>
+                                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
+                                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tMx-GS-3ZD" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="108" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="XJ3-kM-fWq"/>
+                                                    <constraint firstAttribute="height" constant="45" id="Xj1-fY-8EL"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Seed"/>
+                                            </button>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eD-Ip-RbX" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="219" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="150" id="2hC-Ew-szP"/>
+                                                    <constraint firstAttribute="height" constant="45" id="8jF-1G-5sC"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="Strength"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-F1-hQW">
+                                                <rect key="frame" x="8" y="159" width="584" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="bC5-jE-Eoa"/>
+                                                </constraints>
+                                                <string key="text">A simple list of players to randomize 
+their order</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-OQ-5az">
+                                                <rect key="frame" x="8" y="278" width="584" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="58" id="eGp-hN-GzZ"/>
+                                                </constraints>
+                                                <string key="text">A list of players to randomize them 
+into different teams</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-TE-qBO" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="341" width="150" height="45"/>
+                                                <animations/>
+                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="45" id="B4T-EJ-jcs"/>
+                                                    <constraint firstAttribute="width" constant="150" id="lQq-dB-Cum"/>
+                                                </constraints>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
+                                                <state key="normal" title="None"/>
+                                            </button>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-8X-lJL">
+                                                <rect key="frame" x="189" y="400" width="223" height="58"/>
+                                                <animations/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="223" id="CXb-YU-H3M"/>
+                                                    <constraint firstAttribute="height" constant="58" id="z5N-bc-Lzq"/>
+                                                </constraints>
+                                                <string key="text">A list of teams to randomize 
+them into different groups</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                        <animations/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstItem="miU-M2-POo" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="20" id="0F9-Gj-n2q"/>
+                                            <constraint firstItem="tMx-GS-3ZD" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="0eP-J7-aM2"/>
+                                            <constraint firstItem="bWe-OQ-5az" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="2zV-XP-tIO"/>
+                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="top" secondItem="5lc-TE-qBO" secondAttribute="bottom" constant="14" id="3EH-Zb-lBG"/>
+                                            <constraint firstItem="2eD-Ip-RbX" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="6hP-aq-MIW"/>
+                                            <constraint firstItem="bWe-OQ-5az" firstAttribute="top" secondItem="2eD-Ip-RbX" secondAttribute="bottom" constant="14" id="6xl-dq-fxz"/>
+                                            <constraint firstAttribute="trailing" secondItem="miU-M2-POo" secondAttribute="trailing" constant="20" id="CW9-VA-c6U"/>
+                                            <constraint firstItem="miU-M2-POo" firstAttribute="top" secondItem="zyi-gi-efk" secondAttribute="top" constant="8" id="FJb-QF-aMu"/>
+                                            <constraint firstItem="5lc-TE-qBO" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="Feo-aC-djJ"/>
+                                            <constraint firstAttribute="trailing" secondItem="bWe-OQ-5az" secondAttribute="trailing" constant="8" id="G99-jT-YQb"/>
+                                            <constraint firstItem="2eD-Ip-RbX" firstAttribute="top" secondItem="CAt-F1-hQW" secondAttribute="bottom" constant="2" id="L34-qc-cwK"/>
+                                            <constraint firstItem="CAt-F1-hQW" firstAttribute="top" secondItem="tMx-GS-3ZD" secondAttribute="bottom" constant="6" id="MAT-V5-FF1"/>
+                                            <constraint firstItem="bWe-OQ-5az" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="8" id="UiX-tU-XCu"/>
+                                            <constraint firstAttribute="trailing" secondItem="CAt-F1-hQW" secondAttribute="trailing" constant="8" id="W6m-wN-cUC"/>
+                                            <constraint firstItem="CAt-F1-hQW" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="8" id="b2L-AW-CHa"/>
+                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="h58-9U-Udy"/>
+                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="pDK-c2-DoW"/>
+                                            <constraint firstItem="tMx-GS-3ZD" firstAttribute="top" secondItem="miU-M2-POo" secondAttribute="bottom" constant="7" id="pok-1L-2kY"/>
+                                            <constraint firstItem="5lc-TE-qBO" firstAttribute="top" secondItem="bWe-OQ-5az" secondAttribute="bottom" constant="5" id="qoT-91-cvW"/>
+                                        </constraints>
+                                    </view>
+                                </subviews>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="leading" secondItem="IkT-tu-jti" secondAttribute="leading" id="506-Cg-4nc"/>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="centerX" secondItem="IkT-tu-jti" secondAttribute="centerX" id="Dtq-vR-v6P"/>
+                                    <constraint firstAttribute="trailing" secondItem="zyi-gi-efk" secondAttribute="trailing" id="Kia-Xo-Av9"/>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="top" secondItem="IkT-tu-jti" secondAttribute="top" id="gPv-2z-ehO"/>
+                                    <constraint firstAttribute="bottom" secondItem="zyi-gi-efk" secondAttribute="bottom" id="ipP-ZN-eKp"/>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="centerY" secondItem="IkT-tu-jti" secondAttribute="centerY" id="koL-9z-CcV"/>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="width" secondItem="IkT-tu-jti" secondAttribute="width" id="qaA-gj-fpg"/>
+                                    <constraint firstItem="zyi-gi-efk" firstAttribute="height" secondItem="IkT-tu-jti" secondAttribute="height" id="uhL-no-zQt"/>
+                                </constraints>
+                            </scrollView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="IkT-tu-jti" firstAttribute="top" secondItem="xyt-tA-m4Y" secondAttribute="bottom" id="EI1-ed-PCp"/>
+                            <constraint firstItem="7nG-gE-FBe" firstAttribute="top" secondItem="IkT-tu-jti" secondAttribute="bottom" id="O8z-UX-hAW"/>
+                            <constraint firstAttribute="trailing" secondItem="wBy-Mj-QRA" secondAttribute="trailing" id="Pf6-6s-rPq"/>
+                            <constraint firstAttribute="trailing" secondItem="IkT-tu-jti" secondAttribute="trailing" id="WA6-On-7tn"/>
+                            <constraint firstItem="IkT-tu-jti" firstAttribute="leading" secondItem="kzG-E4-uaF" secondAttribute="leading" id="h4V-2x-dxF"/>
+                            <constraint firstItem="7nG-gE-FBe" firstAttribute="top" secondItem="wBy-Mj-QRA" secondAttribute="bottom" id="hYr-yt-ooP"/>
+                            <constraint firstItem="wBy-Mj-QRA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1gF-8X-lJL" secondAttribute="trailing" id="vib-Sk-llf"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Randomizer" id="Zba-4V-OX0"/>
+                    <connections>
+                        <outlet property="contentView" destination="zyi-gi-efk" id="OLm-hU-pac"/>
+                        <outlet property="scrollView" destination="IkT-tu-jti" id="hm7-vv-YAo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="96n-31-Kth" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1857" y="433"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="Arrow.png" width="26" height="15"/>
+        <image name="card_shadow" width="1041" height="1338"/>
+    </resources>
 </document>
