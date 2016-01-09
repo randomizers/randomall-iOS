@@ -12,7 +12,6 @@ import KIF
 import Nimble
 import RealmSwift
 import CoreLocation
-import SwiftyJSON
 
 class BaseTestCase: KIFTestCase {
   var tester: KIFUITestActor { return tester() }
