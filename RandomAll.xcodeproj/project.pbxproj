@@ -22,6 +22,8 @@
 		02928FF31C40C427001E8796 /* HockeySDK.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 02928FEE1C40C32C001E8796 /* HockeySDK.framework */; };
 		02928FF61C40C600001E8796 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FF41C40C600001E8796 /* Helper.swift */; settings = {ASSET_TAGS = (); }; };
 		02928FF71C40C600001E8796 /* Credentials.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FF51C40C600001E8796 /* Credentials.swift */; settings = {ASSET_TAGS = (); }; };
+		02928FFB1C40D102001E8796 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FFA1C40D102001E8796 /* User.swift */; settings = {ASSET_TAGS = (); }; };
+		02E1C7FC1C40E1B700EC4B1A /* Yorkville.ttf in Resources */ = {isa = PBXBuildFile; fileRef = 02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */; settings = {ASSET_TAGS = (); }; };
 		7894935C6C05EB7EB4EEC038 /* Pods_RandomAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF9438348D961A8403E9F07 /* Pods_RandomAll.framework */; };
 		8BE815D4C5EE300FAB714394 /* Pods_RandomAllTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */; };
 		EE0EC614F943D45E526D9B81 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889299F7BBFF3F89623F978D /* Pods.framework */; };
@@ -57,6 +59,8 @@
 		02928FF41C40C600001E8796 /* Helper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		02928FF51C40C600001E8796 /* Credentials.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Credentials.swift; sourceTree = "<group>"; };
 		02928FF81C40C782001E8796 /* Credentials.swift.example */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = Credentials.swift.example; sourceTree = "<group>"; };
+		02928FFA1C40D102001E8796 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */ = {isa = PBXFileReference; lastKnownFileType = file; path = Yorkville.ttf; sourceTree = "<group>"; };
 		1042EAD4A2555975600ACC2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomAllTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C160FB0AA36B08E837D706 /* Pods-RandomAllTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAllTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomAllTests/Pods-RandomAllTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -112,6 +116,7 @@
 		02928FBB1C40B138001E8796 /* RandomAll */ = {
 			isa = PBXGroup;
 			children = (
+				02E1C7FA1C40E1A300EC4B1A /* Resource */,
 				02928FDF1C40B429001E8796 /* Helper */,
 				02928FDE1C40B410001E8796 /* Controller */,
 				02928FDD1C40B403001E8796 /* Model */,
@@ -139,6 +144,7 @@
 			isa = PBXGroup;
 			children = (
 				02928FE01C40B68E001E8796 /* BaseModel.swift */,
+				02928FFA1C40D102001E8796 /* User.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -194,6 +200,14 @@
 				02928FF01C40C32C001E8796 /* HockeySDKResources.bundle */,
 			);
 			path = Resources;
+			sourceTree = "<group>";
+		};
+		02E1C7FA1C40E1A300EC4B1A /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				02E1C7FB1C40E1B700EC4B1A /* Yorkville.ttf */,
+			);
+			path = Resource;
 			sourceTree = "<group>";
 		};
 		40A019F2E249E8BE0CE2A9A2 /* Pods */ = {
@@ -308,6 +322,7 @@
 			files = (
 				02928FC71C40B138001E8796 /* LaunchScreen.storyboard in Resources */,
 				02928FC41C40B138001E8796 /* Assets.xcassets in Resources */,
+				02E1C7FC1C40E1B700EC4B1A /* Yorkville.ttf in Resources */,
 				02928FC21C40B138001E8796 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -449,6 +464,7 @@
 			files = (
 				02928FE11C40B68E001E8796 /* BaseModel.swift in Sources */,
 				02928FBF1C40B138001E8796 /* ViewController.swift in Sources */,
+				02928FFB1C40D102001E8796 /* User.swift in Sources */,
 				02928FF71C40C600001E8796 /* Credentials.swift in Sources */,
 				02928FBD1C40B138001E8796 /* AppDelegate.swift in Sources */,
 				02928FF61C40C600001E8796 /* Helper.swift in Sources */,

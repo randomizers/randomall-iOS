@@ -8,6 +8,7 @@
 
 import UIKit
 import RealmSwift
+
 class BaseModel: Object {
 
   class func findOrNewByPrimaryKey(value: AnyObject, primaryKey: String = "id") -> Self {
