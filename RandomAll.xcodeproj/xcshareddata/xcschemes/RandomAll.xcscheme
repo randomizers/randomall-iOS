@@ -63,6 +63,12 @@
                   Identifier = "CategorizeScreenTestCase">
                </Test>
                <Test
+                  Identifier = "NewRandomizeScreenTestCase">
+               </Test>
+               <Test
+                  Identifier = "SampleUnitTest">
+               </Test>
+               <Test
                   Identifier = "SelectTypeScreenTestCase">
                </Test>
             </SkippedTests>

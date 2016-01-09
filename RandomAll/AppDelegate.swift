@@ -8,6 +8,7 @@
 
 import UIKit
 import HockeySDK
+import RealmSwift
 
 @UIApplicationMain
 class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -15,6 +16,8 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
   var window: UIWindow?
 
   func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
+    _ = try! Realm()
+  print("REALM_PATH: \(Realm.Configuration.defaultConfiguration.path)\n")
     BITHockeyManager.sharedHockeyManager().configureWithIdentifier(Helper.Credentials.hockeyAppId)
     // Do some additional configuration if needed here
     BITHockeyManager.sharedHockeyManager().startManager()

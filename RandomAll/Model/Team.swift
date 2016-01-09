@@ -1,5 +1,5 @@
 //
-//  User.swift
+//  Team.swift
 //  RandomAll
 //
 //  Created by Buu Bui on 1/9/16.
@@ -7,7 +7,8 @@
 //
 
 import UIKit
+import RealmSwift
 
-class Item: BaseModel {
-
+class Team: BaseModel {
+  var players = List<Player>()
 }

@@ -51,6 +51,7 @@
                                 <rect key="frame" x="50" y="123" width="204" height="43"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="SubmitCell - Submit Button"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="Iqm-Ik-Kdo"/>
                                     <constraint firstAttribute="width" constant="204" id="s5c-YG-78k"/>

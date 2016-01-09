@@ -4,6 +4,7 @@
         <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
         <capability name="Aspect ratio constraints" minToolsVersion="5.1"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--Randomizer-->
@@ -416,6 +417,9 @@ categorize?</string>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityLabel" value="tableView"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <animations/>
@@ -440,6 +444,132 @@ categorize?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="Wo6-Nd-pwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="2515" y="433"/>
+        </scene>
+        <!--ResultViewController-->
+        <scene sceneID="BGe-0w-taE">
+            <objects>
+                <viewController storyboardIdentifier="ResultViewController" title="Randomizer" id="PzF-Fz-HNd" userLabel="ResultViewController" customClass="ResultViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="MPC-rB-eYJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="rjN-Ky-TkI"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="H7E-4I-ZfU">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="Ff6-DT-AS9">
+                                <rect key="frame" x="520" y="497" width="80" height="103"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="Ff6-DT-AS9" secondAttribute="height" multiplier="1041:1338" id="ORc-B7-UXM"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="bOr-Q3-0XH"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-s3-8ts">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="430"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-ra-JNn" customClass="RoundButton" customModule="RandomAll" customModuleProvider="target">
+                                <rect key="frame" x="446" y="450" width="109" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.51764705882352935" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="vd2-pS-gif"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-m7-4Rd" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                <rect key="frame" x="45" y="450" width="109" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="43" id="hYU-8q-zbv"/>
+                                    <constraint firstAttribute="width" constant="109" id="hiD-HA-EtZ"/>
+                                </constraints>
+                                <state key="normal" title="Save"/>
+                                <connections>
+                                    <action selector="saveButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="ceV-OH-Swp"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ZVH-ra-JNn" firstAttribute="height" secondItem="JFn-m7-4Rd" secondAttribute="height" id="9gb-Tw-cHs"/>
+                            <constraint firstItem="JFn-m7-4Rd" firstAttribute="top" secondItem="jIp-s3-8ts" secondAttribute="bottom" constant="20" id="BUw-40-fxp"/>
+                            <constraint firstItem="jIp-s3-8ts" firstAttribute="top" secondItem="H7E-4I-ZfU" secondAttribute="top" id="DI8-I4-2GJ"/>
+                            <constraint firstAttribute="trailing" secondItem="jIp-s3-8ts" secondAttribute="trailing" id="GlG-Uf-BVD"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="ZVH-ra-JNn" secondAttribute="trailing" constant="25" id="Lfb-q2-4k6"/>
+                            <constraint firstItem="jIp-s3-8ts" firstAttribute="leading" secondItem="H7E-4I-ZfU" secondAttribute="leading" id="MWV-3r-8k2"/>
+                            <constraint firstItem="ZVH-ra-JNn" firstAttribute="width" secondItem="JFn-m7-4Rd" secondAttribute="width" id="Rzb-zr-rIa"/>
+                            <constraint firstAttribute="trailing" secondItem="Ff6-DT-AS9" secondAttribute="trailing" id="oJN-La-CbW"/>
+                            <constraint firstItem="ZVH-ra-JNn" firstAttribute="centerY" secondItem="JFn-m7-4Rd" secondAttribute="centerY" id="oKP-ql-0uA"/>
+                            <constraint firstItem="rjN-Ky-TkI" firstAttribute="top" secondItem="Ff6-DT-AS9" secondAttribute="bottom" id="qCt-yU-F8n"/>
+                            <constraint firstItem="rjN-Ky-TkI" firstAttribute="top" secondItem="jIp-s3-8ts" secondAttribute="bottom" constant="170" id="qcY-cS-wqW"/>
+                            <constraint firstItem="JFn-m7-4Rd" firstAttribute="leading" secondItem="H7E-4I-ZfU" secondAttribute="leadingMargin" constant="25" id="uFA-pV-0kd"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Randomizer" id="XpQ-a5-sBD">
+                        <barButtonItem key="backBarButtonItem" title=" " id="ACp-8u-sE6"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="jIp-s3-8ts" id="KQF-ha-Zz4"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="6u4-7g-bMd" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3157" y="433"/>
+        </scene>
+        <!--ResultViewController-->
+        <scene sceneID="pBj-88-u7y">
+            <objects>
+                <viewController storyboardIdentifier="HistoryController" title="Randomizer" id="5G7-pi-AEy" userLabel="ResultViewController" customClass="HistoryController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="IYf-NK-ZjM"/>
+                        <viewControllerLayoutGuide type="bottom" id="azx-Ar-cr0"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="p7t-aD-mWN">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="nJe-WB-y1i">
+                                <rect key="frame" x="520" y="497" width="80" height="103"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="FSK-Go-BZE"/>
+                                    <constraint firstAttribute="width" secondItem="nJe-WB-y1i" secondAttribute="height" multiplier="1041:1338" id="Yyc-ug-iZK"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="CBE-Y0-H8U">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="CBE-Y0-H8U" firstAttribute="leading" secondItem="p7t-aD-mWN" secondAttribute="leading" id="0yt-xs-CoJ"/>
+                            <constraint firstItem="CBE-Y0-H8U" firstAttribute="top" secondItem="p7t-aD-mWN" secondAttribute="top" id="DKX-mg-I8s"/>
+                            <constraint firstAttribute="trailing" secondItem="CBE-Y0-H8U" secondAttribute="trailing" id="Qzb-Iu-JdJ"/>
+                            <constraint firstAttribute="trailing" secondItem="nJe-WB-y1i" secondAttribute="trailing" id="afU-a1-Yl6"/>
+                            <constraint firstItem="azx-Ar-cr0" firstAttribute="top" secondItem="CBE-Y0-H8U" secondAttribute="bottom" id="rKJ-hI-VqW"/>
+                            <constraint firstItem="azx-Ar-cr0" firstAttribute="top" secondItem="nJe-WB-y1i" secondAttribute="bottom" id="x5H-X5-dh2"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Randomizer" id="V91-Ha-ZQO">
+                        <barButtonItem key="backBarButtonItem" title=" " id="mrh-8g-m0d"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="tableView" destination="CBE-Y0-H8U" id="odc-s4-0Zy"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="ld6-d9-61F" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3793" y="433"/>
         </scene>
     </scenes>
     <resources>

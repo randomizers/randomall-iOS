@@ -27,13 +27,8 @@ class NewRandomizeViewController: BaseViewController, EditDataViewControllerDele
 
   var gameType: GameType = .Players
   var categorizeType: CategorizeType = .None
-  var data = [
-    ("Anna", "1"),
-    ("Hoang", "2"),
-    ("Hieu", ""),
-    ("Buu", ""),
-  ]
-
+  var data = Array<Player>()
+  var numberOfTeams = 1
   let editViewController = EditDataViewController()
 
   required init?(coder aDecoder: NSCoder) {
@@ -94,8 +89,8 @@ class NewRandomizeViewController: BaseViewController, EditDataViewControllerDele
   func showEditRowView(index index: Int) {
     let item = self.data[index]
     _ = editViewController.view
-    editViewController.nameTextField.text = item.0
-    editViewController.seedTextField.text = item.1
+    editViewController.nameTextField.text = item.name
+    editViewController.seedTextField.text = item.seed > 0 ? "\(item.seed)" : ""
     editViewController.show(self.view)
   }
 
@@ -165,8 +160,9 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
       return cell
     } else if indexPath.section == 2 {
       let cell = tableView.dequeueReusableCellWithIdentifier("DataCell") as! DataCell
-        cell.nameLabel.text = data[indexPath.row].0
-        cell.seedLabel.text = data[indexPath.row].1
+      let item = data[indexPath.row]
+        cell.nameLabel.text = item.name
+        cell.seedLabel.text = item.seedString()
       return cell
     } else if indexPath.section == 3 {
       let cell = tableView.dequeueReusableCellWithIdentifier("SubmitCell") as! SubmitCell
@@ -191,22 +187,42 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
 
   func cellAddButtonClicked(cell: InputDataCell) {
     if let name = cell.nameTextField.text, seed = cell.seedTextField.text where name.characters.count > 0 {
-      self.data.append((name, seed))
+      for player in self.data {
+        if player.name == name {
+          UIAlertView(title: "Error", message: "Name is exist!", delegate: nil, cancelButtonTitle: "OK").show()
+          return
+        }
+      }
+      let player = Player()
+      player.id = Player.nextId()
+      player.name = name
+      player.seed = Int(seed) ?? 0
+      player.write()
+      self.data.append(player)
       self.tableView.reloadData()
     }
   }
 
   func cellDidSubmit(cell cell: SubmitCell) {
     print(cell.numberOfTeamTextField.text)
+    self.numberOfTeams = Int(cell.numberOfTeamTextField.text!) ?? 1
+    let result = RandomizerService.random(self.data, numberOfTeams: self.numberOfTeams)
+    let controller = ResultViewController.instantiateStoryboard()
+    controller.data = result
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 }
 
 extension NewRandomizeViewController {
   func editDataViewController(controller: EditDataViewController, clickedSaveButton: UIButton) {
     if let name = controller.nameTextField.text, seed = controller.seedTextField.text, indexPath = tableView.indexPathForSelectedRow {
-      self.data[indexPath.row].0 = name
-      self.data[indexPath.row].1 = seed
-      self.tableView.reloadData()
+      let player = self.data[indexPath.row]
+      player.update({ () -> Void in
+        player.name = name
+        player.seed = Int(seed) ?? 0
+        }, completion: { [weak self] in
+          self?.tableView.reloadData()
+      })
     }
   }
 

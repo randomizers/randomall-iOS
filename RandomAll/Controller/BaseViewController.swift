@@ -26,6 +26,7 @@ class BaseViewController: UIViewController {
   }
 
   func menuButtonClicked() {
-    UIAlertView(title: "Menu click", message: "Clicked", delegate: nil, cancelButtonTitle: "OK").show()
+    let controller = HistoryController.instantiateStoryboard()
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 }

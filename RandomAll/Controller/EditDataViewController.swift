@@ -8,7 +8,7 @@
 
 import UIKit
 
-class EditDataViewController: UIViewController {
+class EditDataViewController: HudViewController {
 
   @IBOutlet weak var nameTextField: RoundTextField!
   @IBOutlet weak var seedTextField: RoundTextField!
@@ -28,15 +28,6 @@ class EditDataViewController: UIViewController {
     _ = view
     nameTextField.text = name
     seedTextField.text = seed
-  }
-
-  func show(parentView: UIView) {
-    self.view.frame = parentView.bounds
-    parentView.addSubview(self.view)
-  }
-
-  func hide() {
-    self.view.removeFromSuperview()
   }
 
   @IBAction func saveButtonClicked(sender: UIButton) {

@@ -10,7 +10,7 @@ import UIKit
 import RealmSwift
 
 class BaseModel: Object {
-
+  dynamic var id: Int = 0
   class func findOrNewByPrimaryKey(value: AnyObject, primaryKey: String = "id") -> Self {
     if let item = try! Realm().objectForPrimaryKey(self, key: value) {
       return item
@@ -46,5 +46,16 @@ class BaseModel: Object {
       action()
     }
     completion?()
+  }
+
+  class func nextId() -> Int {
+    if let item = try! Realm().objects(self).last {
+      return item.valueForKey("id") as! Int + 1
+    }
+    return 1
+  }
+
+  override static func primaryKey() -> String? {
+    return "id"
   }
 }

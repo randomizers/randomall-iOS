@@ -49,8 +49,8 @@ class CategorizeViewController: BaseViewController {
 
   func showNewRandomizeController(gameType gameType: GameType, categorizeType: CategorizeType) {
     let controller = NewRandomizeViewController.instantiateStoryboard()
-    controller.gameType = gameType
     controller.categorizeType = categorizeType
+    controller.gameType = gameType
     self.navigationController?.pushViewController(controller, animated: true)
   }
 }
