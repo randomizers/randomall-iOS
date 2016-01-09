@@ -8,3 +8,5 @@ Pods
 *.pbxuser
 .idea/
 .swiftlint.yml
+.ruby-version
+RandomAll.xcworkspace/xcuserdata/buubui.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
