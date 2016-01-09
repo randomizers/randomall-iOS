@@ -28,6 +28,9 @@ class BaseTestCase: KIFTestCase {
 
 
   override func beforeEach() {
+    if let controller = UIApplication.sharedApplication().delegate?.window??.rootViewController as? UINavigationController {
+      controller.popToRootViewControllerAnimated(false)
+    }
   }
 
   override func afterEach() {

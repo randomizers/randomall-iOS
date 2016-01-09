@@ -17,13 +17,17 @@ class SelectTypeViewController: BaseViewController {
   @IBOutlet weak var groupButton: UIButton!
 
   @IBAction func playerButtonClicked(sender: UIButton) {
-    let controller = SetupViewController.instantiateStoryboard()
+    let controller = CategorizeViewController.instantiateStoryboard()
     self.navigationController?.pushViewController(controller, animated: true)
   }
 
   @IBAction func teamButtonClicked(sender: UIButton) {
+    let controller = CategorizeViewController.instantiateStoryboard()
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 
   @IBAction func groupsButtonClicked(sender: UIButton) {
+    let controller = CategorizeViewController.instantiateStoryboard()
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 }

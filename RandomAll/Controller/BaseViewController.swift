@@ -17,11 +17,12 @@ class BaseViewController: UIViewController {
 
   func setupUI() {
     self.view.backgroundColor = Style.current.color.viewBackground
+    self.navigationController?.navigationBar.tintColor = UIColor.whiteColor()
     self.navigationController!.navigationBar.titleTextAttributes = [NSFontAttributeName: UIFont.systemFontOfSize(Style.current.metric.navTitleFontSize), NSForegroundColorAttributeName: Style.current.color.navTitleColor]
     let menuButton = UIBarButtonItem(image: UIImage(named: "menu"), style: UIBarButtonItemStyle.Plain, target: self, action: "menuButtonClicked")
     menuButton.accessibilityLabel = "Navigation Menu Button"
-    menuButton.tintColor = UIColor.whiteColor()
     self.navigationItem.rightBarButtonItem = menuButton
+    self.navigationItem.backBarButtonItem?.title = ""
   }
 
   func menuButtonClicked() {

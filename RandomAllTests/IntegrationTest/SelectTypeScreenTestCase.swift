@@ -14,4 +14,19 @@ class SelectTypeScreenTestCase: BaseTestCase {
     tester.waitForViewWithAccessibilityLabel("Teams");
     tester.waitForViewWithAccessibilityLabel("Groups");
   }
+
+  func testPlayersButtonClick() {
+    tester.tapViewWithAccessibilityLabel("Players")
+    tester.waitForViewWithAccessibilityLabel("How do you want to\ncategorize?");
+  }
+
+  func testTeamsButtonClick() {
+    tester.tapViewWithAccessibilityLabel("Teams")
+    tester.waitForViewWithAccessibilityLabel("How do you want to\ncategorize?");
+  }
+
+  func testGroupsButtonClick() {
+    tester.tapViewWithAccessibilityLabel("Groups")
+    tester.waitForViewWithAccessibilityLabel("How do you want to\ncategorize?");
+  }
 }

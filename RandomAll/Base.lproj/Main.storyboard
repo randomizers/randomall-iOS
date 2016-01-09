@@ -174,7 +174,9 @@ them into different groups</string>
                             <constraint firstItem="2VI-nX-U2m" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="v7r-BD-ueT"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Randomizer" id="0pL-bQ-3Nx"/>
+                    <navigationItem key="navigationItem" title="Randomizer" id="0pL-bQ-3Nx">
+                        <barButtonItem key="backBarButtonItem" title=" " id="sZg-gJ-Ogu"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="RKp-Tx-GYL" id="zxM-UG-8PQ"/>
                         <outlet property="groupButton" destination="iRM-tF-a35" id="tUq-op-kNG"/>
@@ -212,10 +214,10 @@ them into different groups</string>
             </objects>
             <point key="canvasLocation" x="480" y="433"/>
         </scene>
-        <!--Setup Screen-->
+        <!--CategorizeViewController-->
         <scene sceneID="MKE-5l-2Vq">
             <objects>
-                <viewController storyboardIdentifier="setup_view_controller" title="Randomizer" id="Qtp-5A-F45" userLabel="Setup Screen" customClass="SetupViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="categorize_view_controller" title="Randomizer" id="Qtp-5A-F45" userLabel="CategorizeViewController" customClass="CategorizeViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="xyt-tA-m4Y"/>
                         <viewControllerLayoutGuide type="bottom" id="7nG-gE-FBe"/>
@@ -244,8 +246,8 @@ them into different groups</string>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="93" id="x34-c0-lAY"/>
                                                 </constraints>
-                                                <string key="text">How do you want
-to randomize?</string>
+                                                <string key="text">How do you want to
+categorize?</string>
                                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="36"/>
                                                 <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                                                 <nil key="highlightedColor"/>
@@ -260,6 +262,9 @@ to randomize?</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Seed"/>
+                                                <connections>
+                                                    <action selector="seedButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="zJG-Vb-LuR"/>
+                                                </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eD-Ip-RbX" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
                                                 <rect key="frame" x="225" y="219" width="150" height="45"/>
@@ -271,27 +276,26 @@ to randomize?</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="Strength"/>
+                                                <connections>
+                                                    <action selector="strengthButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="EvZ-XH-jou"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-F1-hQW">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-F1-hQW">
                                                 <rect key="frame" x="8" y="159" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="bC5-jE-Eoa"/>
                                                 </constraints>
-                                                <string key="text">A simple list of players to randomize 
-their order</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-OQ-5az">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-OQ-5az">
                                                 <rect key="frame" x="8" y="278" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="eGp-hN-GzZ"/>
                                                 </constraints>
-                                                <string key="text">A list of players to randomize them 
-into different teams</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -306,16 +310,17 @@ into different teams</string>
                                                 </constraints>
                                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                                 <state key="normal" title="None"/>
+                                                <connections>
+                                                    <action selector="noneButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="kTm-WP-S5I"/>
+                                                </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-8X-lJL">
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-8X-lJL">
                                                 <rect key="frame" x="189" y="400" width="223" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="223" id="CXb-YU-H3M"/>
                                                     <constraint firstAttribute="height" constant="58" id="z5N-bc-Lzq"/>
                                                 </constraints>
-                                                <string key="text">A list of teams to randomize 
-them into different groups</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
@@ -374,7 +379,10 @@ them into different groups</string>
                     <navigationItem key="navigationItem" title="Randomizer" id="Zba-4V-OX0"/>
                     <connections>
                         <outlet property="contentView" destination="zyi-gi-efk" id="OLm-hU-pac"/>
+                        <outlet property="noneButton" destination="5lc-TE-qBO" id="dkz-ph-Jub"/>
                         <outlet property="scrollView" destination="IkT-tu-jti" id="hm7-vv-YAo"/>
+                        <outlet property="seedButton" destination="tMx-GS-3ZD" id="jfu-uU-ORW"/>
+                        <outlet property="strengthButton" destination="2eD-Ip-RbX" id="pVV-4e-dzl"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96n-31-Kth" userLabel="First Responder" sceneMemberID="firstResponder"/>
