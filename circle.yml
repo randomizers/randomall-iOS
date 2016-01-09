@@ -1,0 +1,35 @@
+machine:
+  timezone:
+    Asia/Ho_Chi_Minh
+  environment:
+    LC_CTYPE: en_US.UTF-8
+  xcode:
+    version: '7.0'
+dependencies:
+  pre:
+    - sudo killall Simulator || true
+    - xcrun simctl list | grep "Shutdown" | grep "6s (" | cut -d "(" -f2 | cut -d ")" -f1 | while read line ; do xargs -I {} xcrun simctl erase "{}" ; done
+    - xcrun instruments -w "iPhone 6s (9.0)" || true
+    - sudo gem install cocoapods --version 0.38.2 --no-ri --no-rdoc
+    - pod install
+checkout:
+  post:
+    - rm /tmp/test_realm_path.realm || true
+test:
+  override:
+    - set -o pipefail &&
+      xcodebuild
+          CODE_SIGNING_REQUIRED=NO
+          CODE_SIGN_IDENTITY=
+          PROVISIONING_PROFILE=
+          -sdk iphonesimulator
+          -destination 'platform=iOS Simulator,OS=9.0,name=iPhone 6s'
+          -workspace RandomAll.xcworkspace
+          -scheme "RandomAll"
+          -enableCodeCoverage YES
+          clean build test |
+        tee $CIRCLE_ARTIFACTS/xcode_raw.log |
+        xcpretty --color --report junit --output $CIRCLE_TEST_REPORTS/xcode/results.xml
+  post:
+    - bundle exec slather
+    - bundle exec slather coverage --simple-output | tee $CIRCLE_TEST_REPORTS/Coverage.log
