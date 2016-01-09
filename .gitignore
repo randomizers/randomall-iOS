@@ -1,0 +1,10 @@
+# Xcode
+.DS_Store
+build/
+*.pbxuser
+DerivedData
+# Pods - for those of you who use CocoaPods
+Pods
+*.pbxuser
+.idea/
+.swiftlint.yml

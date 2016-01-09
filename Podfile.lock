@@ -1,0 +1,70 @@
+PODS:
+  - Alamofire (2.0.2)
+  - Cartography (0.5.0)
+  - DynamicColor (2.3.0)
+  - HanekeSwift (0.10.1)
+  - KIF (3.3.1):
+    - KIF/Core (= 3.3.1)
+  - KIF/Core (3.3.1)
+  - Nimble (3.0.0)
+  - OHHTTPStubs (4.7.0):
+    - OHHTTPStubs/Default (= 4.7.0)
+  - OHHTTPStubs/Core (4.7.0)
+  - OHHTTPStubs/Default (4.7.0):
+    - OHHTTPStubs/Core
+    - OHHTTPStubs/JSON
+    - OHHTTPStubs/NSURLSession
+    - OHHTTPStubs/OHPathHelpers
+  - OHHTTPStubs/JSON (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/NSURLSession (4.7.0):
+    - OHHTTPStubs/Core
+  - OHHTTPStubs/OHPathHelpers (4.7.0)
+  - Quick (0.8.0)
+  - Realm (0.97.0):
+    - Realm/Headers (= 0.97.0)
+  - Realm/Headers (0.97.0)
+  - RealmSwift (0.97.0):
+    - Realm (= 0.97.0)
+  - SwiftyJSON (2.3.2)
+
+DEPENDENCIES:
+  - Alamofire (~> 2.0.0)
+  - Cartography (from `https://github.com/robb/Cartography.git`)
+  - DynamicColor
+  - HanekeSwift
+  - KIF (from `https://github.com/kif-framework/KIF.git`)
+  - Nimble
+  - OHHTTPStubs
+  - Quick
+  - RealmSwift
+  - SwiftyJSON
+
+EXTERNAL SOURCES:
+  Cartography:
+    :git: https://github.com/robb/Cartography.git
+  KIF:
+    :git: https://github.com/kif-framework/KIF.git
+
+CHECKOUT OPTIONS:
+  Cartography:
+    :commit: f3b851f29fe78a6f226836874c6599d058a912ac
+    :git: https://github.com/robb/Cartography.git
+  KIF:
+    :commit: 9529118601c42cc6ee05de5ff27fd9c4283b190b
+    :git: https://github.com/kif-framework/KIF.git
+
+SPEC CHECKSUMS:
+  Alamofire: 8edbab00802a752bb5240cc2abe70e7e881488ad
+  Cartography: 314f5ed1495995760487161eeb7a8a0940d88ad3
+  DynamicColor: 18badd22ee5edeefcbe0a8f5887a86640c592a1c
+  HanekeSwift: 08e47d3d0f2899ec58e5d257beba0de619aca9e8
+  KIF: ff9f0e585503871bcd096937cc760081d770c5e2
+  Nimble: 4c353d43735b38b545cbb4cb91504588eb5de926
+  OHHTTPStubs: d2bf6a0f407620d67e75a1d3f12d86a2b1dd15c0
+  Quick: 563d0f6ec5f72e394645adb377708639b7dd38ab
+  Realm: b498a6fb9d288b171ff98d0e2d4384c295be8990
+  RealmSwift: d014810dec75c9a3f1a33926d2dabfed855c582c
+  SwiftyJSON: 04ccea08915aa0109039157c7974cf0298da292a
+
+COCOAPODS: 0.39.0
