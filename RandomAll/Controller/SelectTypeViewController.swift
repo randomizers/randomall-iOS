@@ -7,7 +7,6 @@
 //
 
 import UIKit
-import DynamicColor
 
 class SelectTypeViewController: BaseViewController {
   @IBOutlet weak var scrollView: UIScrollView!
@@ -17,17 +16,20 @@ class SelectTypeViewController: BaseViewController {
   @IBOutlet weak var groupButton: UIButton!
 
   @IBAction func playerButtonClicked(sender: UIButton) {
-    let controller = CategorizeViewController.instantiateStoryboard()
-    self.navigationController?.pushViewController(controller, animated: true)
+    showCategorizeController(gameType: .Players)
   }
 
   @IBAction func teamButtonClicked(sender: UIButton) {
-    let controller = CategorizeViewController.instantiateStoryboard()
-    self.navigationController?.pushViewController(controller, animated: true)
+    showCategorizeController(gameType: .Teams)
   }
 
   @IBAction func groupsButtonClicked(sender: UIButton) {
+    showCategorizeController(gameType: .Groups)
+  }
+
+  func showCategorizeController(gameType gameType: GameType) {
     let controller = CategorizeViewController.instantiateStoryboard()
+    controller.gameType = gameType
     self.navigationController?.pushViewController(controller, animated: true)
   }
 }

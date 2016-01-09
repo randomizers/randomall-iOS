@@ -207,7 +207,7 @@ them into different groups</string>
                     <nil name="viewControllers"/>
                     <connections>
                         <segue destination="BYZ-38-t0r" kind="relationship" relationship="rootViewController" id="U6s-qf-b1h"/>
-                        <segue destination="Qtp-5A-F45" kind="show" id="qvr-vT-npj"/>
+                        <segue destination="Qtp-5A-F45" kind="show" identifier="show_categorize" id="qvr-vT-npj"/>
                     </connections>
                 </navigationController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ARa-KH-3zS" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -376,7 +376,9 @@ categorize?</string>
                             <constraint firstItem="wBy-Mj-QRA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1gF-8X-lJL" secondAttribute="trailing" id="vib-Sk-llf"/>
                         </constraints>
                     </view>
-                    <navigationItem key="navigationItem" title="Randomizer" id="Zba-4V-OX0"/>
+                    <navigationItem key="navigationItem" title="Randomizer" id="Zba-4V-OX0">
+                        <barButtonItem key="backBarButtonItem" title=" " id="VZl-WZ-8KL"/>
+                    </navigationItem>
                     <connections>
                         <outlet property="contentView" destination="zyi-gi-efk" id="OLm-hU-pac"/>
                         <outlet property="noneButton" destination="5lc-TE-qBO" id="dkz-ph-Jub"/>
@@ -388,6 +390,56 @@ categorize?</string>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="96n-31-Kth" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1857" y="433"/>
+        </scene>
+        <!--NewRandomizeViewController-->
+        <scene sceneID="Phh-B9-g92">
+            <objects>
+                <viewController storyboardIdentifier="NewRandomizeViewController" title="Randomizer" id="BGn-xE-Sdj" userLabel="NewRandomizeViewController" customClass="NewRandomizeViewController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="ldT-O0-BHY"/>
+                        <viewControllerLayoutGuide type="bottom" id="PPm-t9-SSi"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="UmA-9f-JtL">
+                        <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="card_shadow" translatesAutoresizingMaskIntoConstraints="NO" id="iN4-q1-sfZ">
+                                <rect key="frame" x="520" y="497" width="80" height="103"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" secondItem="iN4-q1-sfZ" secondAttribute="height" multiplier="1041:1338" id="es0-SF-CGA"/>
+                                    <constraint firstAttribute="width" relation="lessThanOrEqual" constant="80" id="hyR-LP-sSP"/>
+                                </constraints>
+                            </imageView>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="BOe-jZ-mgK">
+                                <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
+                                <animations/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                            </tableView>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="PPm-t9-SSi" firstAttribute="top" secondItem="iN4-q1-sfZ" secondAttribute="bottom" id="5R2-ZI-F6o"/>
+                            <constraint firstItem="BOe-jZ-mgK" firstAttribute="top" secondItem="UmA-9f-JtL" secondAttribute="top" id="bPP-FT-T8u"/>
+                            <constraint firstAttribute="trailing" secondItem="BOe-jZ-mgK" secondAttribute="trailing" id="gFd-WP-v1D"/>
+                            <constraint firstItem="BOe-jZ-mgK" firstAttribute="leading" secondItem="UmA-9f-JtL" secondAttribute="leading" id="iFY-md-fbk"/>
+                            <constraint firstAttribute="trailing" secondItem="iN4-q1-sfZ" secondAttribute="trailing" id="uRK-Am-268"/>
+                            <constraint firstItem="PPm-t9-SSi" firstAttribute="top" secondItem="BOe-jZ-mgK" secondAttribute="bottom" id="zPr-14-4Jk"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" title="Randomizer" id="bwb-IT-h8d">
+                        <barButtonItem key="backBarButtonItem" title=" " id="03b-Vu-xMB"/>
+                    </navigationItem>
+                    <connections>
+                        <outlet property="bottomTableConstraint" destination="zPr-14-4Jk" id="kir-do-KF0"/>
+                        <outlet property="tableView" destination="BOe-jZ-mgK" id="N1P-I6-tBZ"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Wo6-Nd-pwc" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="2515" y="433"/>
         </scene>
     </scenes>
     <resources>

@@ -14,5 +14,7 @@ extension Style {
     var viewBackground = UIColor(red: 0.353, green: 0.757, blue: 0.651, alpha: 1) //5AC1A6
     var navTitleColor = UIColor(red: 0.314, green: 0.89, blue: 0.761, alpha: 1) //50E3C2
     var blueTypeButtonBackground = UIColor(red: 0.29, green: 0.565, blue: 0.886, alpha: 1) //4A90E2
+    var dataCellBackground = UIColor(red: 0.776, green: 0.914, blue: 0.878, alpha: 1) //C6E9E0
+    var dataCellHighlightBackground = UIColor(red: 0.725, green: 0.855, blue: 0.823, alpha: 1) //b8dad1
   }
 }

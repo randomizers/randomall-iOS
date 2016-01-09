@@ -8,6 +8,6 @@
 
 import UIKit
 
-class User: BaseModel {
+class Item: BaseModel {
 
 }

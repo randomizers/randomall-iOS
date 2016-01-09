@@ -54,7 +54,16 @@
             </BuildableReference>
             <SkippedTests>
                <Test
+                  Identifier = "BaseSpec">
+               </Test>
+               <Test
                   Identifier = "BaseTestCase">
+               </Test>
+               <Test
+                  Identifier = "CategorizeScreenTestCase">
+               </Test>
+               <Test
+                  Identifier = "SelectTypeScreenTestCase">
                </Test>
             </SkippedTests>
          </TestableReference>

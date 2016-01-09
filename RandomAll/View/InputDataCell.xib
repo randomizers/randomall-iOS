@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="8191" systemVersion="15C50" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES">
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" rowHeight="251" id="KGk-i7-Jjw" customClass="InputDataCell" customModule="RandomAll" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="320" height="170"/>
+            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+            <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
+                <rect key="frame" x="0.0" y="0.0" width="320" height="169"/>
+                <autoresizingMask key="autoresizingMask"/>
+                <subviews>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Add names" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="58Q-da-EtW">
+                        <rect key="frame" x="8" y="8" width="304" height="24"/>
+                        <animations/>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seeds" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="QxV-Zu-L0A">
+                        <rect key="frame" x="8" y="108" width="85" height="24"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="85" id="TkI-68-xbY"/>
+                            <constraint firstAttribute="height" constant="24" id="wo2-XG-Pcd"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" weight="light" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="*optional" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="98P-4y-NS9">
+                        <rect key="frame" x="8" y="129" width="85" height="18"/>
+                        <animations/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="18" id="Ov0-Wu-PXW"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" placeholder="Enter a name" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="RYq-Kv-gkb" customClass="RoundTextField" customModule="RandomAll" customModuleProvider="target">
+                        <rect key="frame" x="8" y="44" width="304" height="43"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.91372549020000005" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="InputDataCell - Name textfield"/>
+                        <constraints>
+                            <constraint firstAttribute="height" constant="43" id="iDN-pU-8RX"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits"/>
+                    </textField>
+                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cA2-ie-8y0" customClass="RoundButton" customModule="RandomAll" customModuleProvider="target">
+                        <rect key="frame" x="219" y="104" width="93" height="43"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.18431372549019609" green="0.51764705882352935" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="93" id="XCb-Az-05U"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="boldSystem" pointSize="18"/>
+                        <state key="normal" title="+Add"/>
+                        <connections>
+                            <action selector="addButtonClicked:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="ayy-vW-wrJ"/>
+                        </connections>
+                    </button>
+                    <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="kja-7P-6sG" customClass="RoundTextField" customModule="RandomAll" customModuleProvider="target">
+                        <rect key="frame" x="101" y="104" width="93" height="43"/>
+                        <animations/>
+                        <color key="backgroundColor" red="0.77647058820000003" green="0.91372549020000005" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                        <accessibility key="accessibilityConfiguration" label="InputDataCell - Seed textfield"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="93" id="RJL-ao-Jg1"/>
+                            <constraint firstAttribute="height" constant="43" id="iJy-Bt-KSt"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                        <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                    </textField>
+                </subviews>
+                <animations/>
+                <color key="backgroundColor" red="0.30980392159999998" green="0.60392156860000001" blue="0.52549019610000003" alpha="1" colorSpace="calibratedRGB"/>
+                <constraints>
+                    <constraint firstItem="58Q-da-EtW" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="8" id="124-4g-zcm"/>
+                    <constraint firstItem="58Q-da-EtW" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="8" id="9jT-OF-YAS"/>
+                    <constraint firstItem="kja-7P-6sG" firstAttribute="top" secondItem="RYq-Kv-gkb" secondAttribute="bottom" constant="17" id="BGE-Wa-SIz"/>
+                    <constraint firstItem="cA2-ie-8y0" firstAttribute="centerY" secondItem="kja-7P-6sG" secondAttribute="centerY" id="OfY-WP-IbH"/>
+                    <constraint firstItem="98P-4y-NS9" firstAttribute="trailing" secondItem="QxV-Zu-L0A" secondAttribute="trailing" id="VBt-It-yAr"/>
+                    <constraint firstItem="cA2-ie-8y0" firstAttribute="trailing" secondItem="RYq-Kv-gkb" secondAttribute="trailing" id="WRJ-8K-g1k"/>
+                    <constraint firstItem="98P-4y-NS9" firstAttribute="top" secondItem="QxV-Zu-L0A" secondAttribute="bottom" constant="-3" id="XMX-8h-g6a"/>
+                    <constraint firstItem="98P-4y-NS9" firstAttribute="leading" secondItem="QxV-Zu-L0A" secondAttribute="leading" id="YBw-NP-T4q"/>
+                    <constraint firstItem="RYq-Kv-gkb" firstAttribute="top" secondItem="58Q-da-EtW" secondAttribute="bottom" constant="12" id="bXL-3C-TYc"/>
+                    <constraint firstItem="RYq-Kv-gkb" firstAttribute="width" secondItem="58Q-da-EtW" secondAttribute="width" id="gUx-dq-rHw"/>
+                    <constraint firstItem="kja-7P-6sG" firstAttribute="leading" secondItem="QxV-Zu-L0A" secondAttribute="trailing" constant="8" id="pQp-uo-VDL"/>
+                    <constraint firstItem="QxV-Zu-L0A" firstAttribute="top" secondItem="RYq-Kv-gkb" secondAttribute="bottom" constant="21" id="pVd-FA-AQE"/>
+                    <constraint firstItem="QxV-Zu-L0A" firstAttribute="leading" secondItem="RYq-Kv-gkb" secondAttribute="leading" id="qFu-0l-Jyz"/>
+                    <constraint firstItem="RYq-Kv-gkb" firstAttribute="centerX" secondItem="H2p-sc-9uM" secondAttribute="centerX" id="weS-Po-WFH"/>
+                    <constraint firstItem="cA2-ie-8y0" firstAttribute="height" secondItem="kja-7P-6sG" secondAttribute="height" id="yHY-9k-kHU"/>
+                    <constraint firstAttribute="trailing" secondItem="58Q-da-EtW" secondAttribute="trailing" constant="8" id="yKg-zX-KW5"/>
+                </constraints>
+            </tableViewCellContentView>
+            <animations/>
+            <connections>
+                <outlet property="addButton" destination="cA2-ie-8y0" id="zte-NV-JS9"/>
+                <outlet property="nameTextField" destination="RYq-Kv-gkb" id="UvK-Dv-Jaj"/>
+                <outlet property="seedTextField" destination="kja-7P-6sG" id="hHg-fL-RQB"/>
+                <outlet property="titleLabel" destination="58Q-da-EtW" id="R56-oe-lTU"/>
+            </connections>
+            <point key="canvasLocation" x="209" y="465"/>
+        </tableViewCell>
+    </objects>
+</document>

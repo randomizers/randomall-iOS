@@ -8,15 +8,10 @@
 
 import UIKit
 
-class BlueTypeButton: UIButton {
+class BlueTypeButton: RoundButton {
 
-  required init?(coder aDecoder: NSCoder) {
-    super.init(coder: aDecoder)
-    setupUI()
-  }
-
-  func setupUI() {
+  override func setupUI() {
+    super.setupUI()
     self.backgroundColor = Style.current.color.blueTypeButtonBackground
-    self.layer.cornerRadius = Style.current.metric.typeButtonRadius
   }
 }
