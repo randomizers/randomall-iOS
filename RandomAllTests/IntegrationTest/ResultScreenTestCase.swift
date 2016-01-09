@@ -14,9 +14,10 @@ class ResultScreenTestCase: BaseTestCase {
 
   override func beforeEach() {
     super.beforeEach()
-    tester.tapViewWithAccessibilityLabel("Players")
+    tester.tapViewWithAccessibilityLabel("Teams")
     tester.tapViewWithAccessibilityLabel("Seed")
     tester.waitForTimeInterval(0.2)
+    self.addPlayers()
     let tableView = tester.waitForViewWithAccessibilityLabel("tableView") as! UITableView
     tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 3), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
     tapSubmitButton()
@@ -33,6 +34,7 @@ class ResultScreenTestCase: BaseTestCase {
     tester.tapViewWithAccessibilityLabel("Save")
     tester.clearTextFromAndThenEnterText("New List", intoViewWithAccessibilityLabel: "SaveResultViewController - Name Text Field")
     tester.tapViewWithAccessibilityLabel("Save")
+    tester.tapViewWithAccessibilityLabel("OK")
   }
 
   func testEdit() {
@@ -44,5 +46,17 @@ class ResultScreenTestCase: BaseTestCase {
     let tableView = tester.waitForViewWithAccessibilityLabel("tableView") as! UITableView
     let cell = tableView.cellForRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 3)) as! SubmitCell
     tester.tapAccessibilityElement(nil, inView: cell.randomizeButton)
+  }
+
+  func addPlayers() {
+    let data = [
+      ("Buu", "1"),
+      ("Quang", "2"),
+      ("Phong", ""),
+      ("Vu", "3"),
+    ]
+    for item in data {
+      self.addNewPlayer(name: item.0, seed: item.1)
+    }
   }
 }

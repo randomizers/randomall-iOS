@@ -25,8 +25,20 @@ class NewRandomizeViewController: BaseViewController, EditDataViewControllerDele
   @IBOutlet weak var tableView: UITableView!
   @IBOutlet weak var bottomTableConstraint: NSLayoutConstraint!
 
-  var gameType: GameType = .Players
-  var categorizeType: CategorizeType = .None
+  var gameType: GameType = .Players {
+    didSet {
+      if gameType == .Players {
+        categorizeType = .None
+        numberOfTeams = 1
+      }
+      self.tableView?.reloadData()
+    }
+  }
+  var categorizeType: CategorizeType = .None {
+    didSet {
+      self.tableView?.reloadData()
+    }
+  }
   var data = Array<Player>()
   var numberOfTeams = 1
   let editViewController = EditDataViewController()
@@ -121,7 +133,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
 
   func tableView(tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
     switch section {
-    case 0: return 2
+    case 0: return self.gameType == .Players ? 1 : 2
     case 2: return self.data.count
     default: return 1
     }
@@ -156,6 +168,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
       return cell
     } else if indexPath.section == 1 {
       let cell = tableView.dequeueReusableCellWithIdentifier("InputDataCell") as! InputDataCell
+      cell.seedTextField.enabled = self.categorizeType != .None
       cell.delegate = self
       return cell
     } else if indexPath.section == 2 {
@@ -167,6 +180,12 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
     } else if indexPath.section == 3 {
       let cell = tableView.dequeueReusableCellWithIdentifier("SubmitCell") as! SubmitCell
       cell.participantsLabel.text = "\(self.data.count) participants"
+      if self.gameType == .Players {
+        cell.numberOfTeamTextField.enabled = false
+        cell.numberOfTeamTextField.text = "1"
+      } else {
+        cell.numberOfTeamTextField.enabled = true
+      }
       cell.delegate = self
       return cell
     }
@@ -206,7 +225,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
   func cellDidSubmit(cell cell: SubmitCell) {
     print(cell.numberOfTeamTextField.text)
     self.numberOfTeams = Int(cell.numberOfTeamTextField.text!) ?? 1
-    let result = RandomizerService.random(self.data, numberOfTeams: self.numberOfTeams)
+    let result = RandomizerService.randomize(self.data, numberOfTeams: self.numberOfTeams, categorizeType: self.categorizeType)
     let controller = ResultViewController.instantiateStoryboard()
     controller.data = result
     self.navigationController?.pushViewController(controller, animated: true)

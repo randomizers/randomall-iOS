@@ -6,7 +6,9 @@ import RealmSwift
 
 class BaseSpec: QuickSpec {
   override func spec() {
-    beforeSuite {}
+    beforeEach {
+      TestHelper.cleanTestDatabase()
+    }
 
     afterEach {
     }

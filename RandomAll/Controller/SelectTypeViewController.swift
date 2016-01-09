@@ -16,7 +16,11 @@ class SelectTypeViewController: BaseViewController {
   @IBOutlet weak var groupButton: UIButton!
 
   @IBAction func playerButtonClicked(sender: UIButton) {
-    showCategorizeController(gameType: .Players)
+    let controller = NewRandomizeViewController.instantiateStoryboard()
+    controller.gameType = .Players
+    controller.categorizeType = .None
+    controller.numberOfTeams = 1
+    self.navigationController?.pushViewController(controller, animated: true)
   }
 
   @IBAction func teamButtonClicked(sender: UIButton) {

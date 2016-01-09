@@ -9,12 +9,12 @@
 class NewRandomizeScreenTestCase: BaseTestCase {
   override func beforeEach() {
     super.beforeEach()
-    tester.tapViewWithAccessibilityLabel("Players")
+    tester.tapViewWithAccessibilityLabel("Teams")
     tester.tapViewWithAccessibilityLabel("Seed")
   }
 
   func testElements() {
-    tester.waitForViewWithAccessibilityLabel("Players")
+    tester.waitForViewWithAccessibilityLabel("Teams")
     tester.waitForViewWithAccessibilityLabel("Seed")
     tester.waitForViewWithAccessibilityLabel("Add names")
     tester.waitForViewWithAccessibilityLabel("+Add")
@@ -28,7 +28,7 @@ class NewRandomizeScreenTestCase: BaseTestCase {
   }
 }
 
-extension NewRandomizeScreenTestCase {
+extension BaseTestCase {
   func addNewPlayer(name name: String, seed: String) {
     tester.clearTextFromAndThenEnterText(name, intoViewWithAccessibilityLabel: "InputDataCell - Name textfield")
     tester.clearTextFromAndThenEnterText(seed, intoViewWithAccessibilityLabel: "InputDataCell - Seed textfield")

@@ -8,7 +8,6 @@
 
 /* Begin PBXBuildFile section */
 		02928FBD1C40B138001E8796 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FBC1C40B138001E8796 /* AppDelegate.swift */; };
-		02928FBF1C40B138001E8796 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02928FBE1C40B138001E8796 /* ViewController.swift */; };
 		02928FC21C40B138001E8796 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02928FC01C40B138001E8796 /* Main.storyboard */; };
 		02928FC41C40B138001E8796 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 02928FC31C40B138001E8796 /* Assets.xcassets */; };
 		02928FC71C40B138001E8796 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 02928FC51C40B138001E8796 /* LaunchScreen.storyboard */; };
@@ -52,10 +51,15 @@
 		02E698571C4156180065F97C /* SaveResultViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 02E698551C4156170065F97C /* SaveResultViewController.xib */; settings = {ASSET_TAGS = (); }; };
 		02E698591C41563B0065F97C /* HudViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E698581C41563B0065F97C /* HudViewController.swift */; settings = {ASSET_TAGS = (); }; };
 		02E6985B1C415A200065F97C /* ResultScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6985A1C415A200065F97C /* ResultScreenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
-		02E6985D1C41632A0065F97C /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6985C1C41632A0065F97C /* Result.swift */; settings = {ASSET_TAGS = (); }; };
+		02E6985D1C41632A0065F97C /* RandomResult.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6985C1C41632A0065F97C /* RandomResult.swift */; settings = {ASSET_TAGS = (); }; };
 		02E6985F1C41660E0065F97C /* Team.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6985E1C41660E0065F97C /* Team.swift */; settings = {ASSET_TAGS = (); }; };
 		02E698611C416D310065F97C /* RandomizerService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E698601C416D310065F97C /* RandomizerService.swift */; settings = {ASSET_TAGS = (); }; };
 		02E698631C4171CC0065F97C /* HistoryController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E698621C4171CC0065F97C /* HistoryController.swift */; settings = {ASSET_TAGS = (); }; };
+		02E698691C417C9C0065F97C /* Array+Shufle.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E698681C417C9C0065F97C /* Array+Shufle.swift */; settings = {ASSET_TAGS = (); }; };
+		02E6986B1C4185EC0065F97C /* ArrayList.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6986A1C4185EC0065F97C /* ArrayList.swift */; settings = {ASSET_TAGS = (); }; };
+		02E6986D1C4193D30065F97C /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6986C1C4193D30065F97C /* Constant.swift */; settings = {ASSET_TAGS = (); }; };
+		02E6986F1C4194E00065F97C /* TestHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E6986E1C4194E00065F97C /* TestHelper.swift */; settings = {ASSET_TAGS = (); }; };
+		02E698711C41981E0065F97C /* HistoryScreenTestCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 02E698701C41981E0065F97C /* HistoryScreenTestCase.swift */; settings = {ASSET_TAGS = (); }; };
 		7894935C6C05EB7EB4EEC038 /* Pods_RandomAll.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BFF9438348D961A8403E9F07 /* Pods_RandomAll.framework */; };
 		8BE815D4C5EE300FAB714394 /* Pods_RandomAllTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */; };
 		EE0EC614F943D45E526D9B81 /* Pods.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 889299F7BBFF3F89623F978D /* Pods.framework */; };
@@ -74,7 +78,6 @@
 /* Begin PBXFileReference section */
 		02928FB91C40B138001E8796 /* RandomAll.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = RandomAll.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		02928FBC1C40B138001E8796 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		02928FBE1C40B138001E8796 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
 		02928FC11C40B138001E8796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		02928FC31C40B138001E8796 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		02928FC61C40B138001E8796 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -123,10 +126,15 @@
 		02E698551C4156170065F97C /* SaveResultViewController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = SaveResultViewController.xib; sourceTree = "<group>"; };
 		02E698581C41563B0065F97C /* HudViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HudViewController.swift; sourceTree = "<group>"; };
 		02E6985A1C415A200065F97C /* ResultScreenTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ResultScreenTestCase.swift; sourceTree = "<group>"; };
-		02E6985C1C41632A0065F97C /* Result.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		02E6985C1C41632A0065F97C /* RandomResult.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomResult.swift; sourceTree = "<group>"; };
 		02E6985E1C41660E0065F97C /* Team.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Team.swift; sourceTree = "<group>"; };
 		02E698601C416D310065F97C /* RandomizerService.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RandomizerService.swift; sourceTree = "<group>"; };
 		02E698621C4171CC0065F97C /* HistoryController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryController.swift; sourceTree = "<group>"; };
+		02E698681C417C9C0065F97C /* Array+Shufle.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = "Array+Shufle.swift"; sourceTree = "<group>"; };
+		02E6986A1C4185EC0065F97C /* ArrayList.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ArrayList.swift; sourceTree = "<group>"; };
+		02E6986C1C4193D30065F97C /* Constant.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
+		02E6986E1C4194E00065F97C /* TestHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = TestHelper.swift; sourceTree = "<group>"; };
+		02E698701C41981E0065F97C /* HistoryScreenTestCase.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = HistoryScreenTestCase.swift; sourceTree = "<group>"; };
 		1042EAD4A2555975600ACC2C /* Pods.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.debug.xcconfig; path = "Pods/Target Support Files/Pods/Pods.debug.xcconfig"; sourceTree = "<group>"; };
 		2DE66BAE6D6E1865D3E5C74F /* Pods_RandomAllTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_RandomAllTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		51C160FB0AA36B08E837D706 /* Pods-RandomAllTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-RandomAllTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-RandomAllTests/Pods-RandomAllTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -188,7 +196,6 @@
 				02928FDE1C40B410001E8796 /* Controller */,
 				02928FDD1C40B403001E8796 /* Model */,
 				02928FBC1C40B138001E8796 /* AppDelegate.swift */,
-				02928FBE1C40B138001E8796 /* ViewController.swift */,
 				02928FC01C40B138001E8796 /* Main.storyboard */,
 				02928FC31C40B138001E8796 /* Assets.xcassets */,
 				02928FC51C40B138001E8796 /* LaunchScreen.storyboard */,
@@ -200,6 +207,7 @@
 		02928FD01C40B138001E8796 /* RandomAllTests */ = {
 			isa = PBXGroup;
 			children = (
+				02E6986E1C4194E00065F97C /* TestHelper.swift */,
 				02928FE31C40B873001E8796 /* IntegrationTest */,
 				02928FE21C40B863001E8796 /* UnitTest */,
 				02928FD31C40B138001E8796 /* Info.plist */,
@@ -213,7 +221,7 @@
 				02E698601C416D310065F97C /* RandomizerService.swift */,
 				02928FE01C40B68E001E8796 /* BaseModel.swift */,
 				02928FFA1C40D102001E8796 /* Player.swift */,
-				02E6985C1C41632A0065F97C /* Result.swift */,
+				02E6985C1C41632A0065F97C /* RandomResult.swift */,
 				02E6985E1C41660E0065F97C /* Team.swift */,
 			);
 			path = Model;
@@ -240,10 +248,13 @@
 		02928FDF1C40B429001E8796 /* Helper */ = {
 			isa = PBXGroup;
 			children = (
+				02E6986C1C4193D30065F97C /* Constant.swift */,
 				02E1C81C1C41061800EC4B1A /* Storyboard.swift */,
 				02928FF81C40C782001E8796 /* Credentials.swift.example */,
 				02928FF41C40C600001E8796 /* Helper.swift */,
 				02928FF51C40C600001E8796 /* Credentials.swift */,
+				02E698681C417C9C0065F97C /* Array+Shufle.swift */,
+				02E6986A1C4185EC0065F97C /* ArrayList.swift */,
 			);
 			path = Helper;
 			sourceTree = "<group>";
@@ -265,6 +276,7 @@
 				02CEDBF81C410A2C00C30A30 /* CategorizeScreenTestCase.swift */,
 				02E6984C1C4144E70065F97C /* NewRandomizeScreenTestCase.swift */,
 				02E6985A1C415A200065F97C /* ResultScreenTestCase.swift */,
+				02E698701C41981E0065F97C /* HistoryScreenTestCase.swift */,
 			);
 			path = IntegrationTest;
 			sourceTree = "<group>";
@@ -583,13 +595,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				02E6985D1C41632A0065F97C /* Result.swift in Sources */,
+				02E6985D1C41632A0065F97C /* RandomResult.swift in Sources */,
 				02928FE11C40B68E001E8796 /* BaseModel.swift in Sources */,
 				02E1C7FE1C40F56400EC4B1A /* SelectTypeViewController.swift in Sources */,
 				02E698521C41524D0065F97C /* ResultCell.swift in Sources */,
 				02E1C80F1C40F96700EC4B1A /* BaseViewController.swift in Sources */,
+				02E6986B1C4185EC0065F97C /* ArrayList.swift in Sources */,
 				02CEDC0A1C4123F900C30A30 /* DataCell.swift in Sources */,
-				02928FBF1C40B138001E8796 /* ViewController.swift in Sources */,
+				02E6986D1C4193D30065F97C /* Constant.swift in Sources */,
 				02E1C8181C41027300EC4B1A /* CategorizeViewController.swift in Sources */,
 				02928FFB1C40D102001E8796 /* Player.swift in Sources */,
 				02CEDC0E1C41285200C30A30 /* SubmitCell.swift in Sources */,
@@ -612,6 +625,7 @@
 				02CEDC011C41144A00C30A30 /* RoundButton.swift in Sources */,
 				02E698561C4156180065F97C /* SaveResultViewController.swift in Sources */,
 				02E1C81B1C4103A500EC4B1A /* BlueTypeButton.swift in Sources */,
+				02E698691C417C9C0065F97C /* Array+Shufle.swift in Sources */,
 				02928FF61C40C600001E8796 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -623,7 +637,9 @@
 				02928FE51C40B8DD001E8796 /* BaseSpec.swift in Sources */,
 				02928FE91C40BD45001E8796 /* BaseTestCase.swift in Sources */,
 				02E6984D1C4144E70065F97C /* NewRandomizeScreenTestCase.swift in Sources */,
+				02E6986F1C4194E00065F97C /* TestHelper.swift in Sources */,
 				02928FE71C40B93C001E8796 /* SampleUnitTest.swift in Sources */,
+				02E698711C41981E0065F97C /* HistoryScreenTestCase.swift in Sources */,
 				02E1C8111C40FB6300EC4B1A /* SelectTypeScreenTestCase.swift in Sources */,
 				02CEDBF91C410A2C00C30A30 /* CategorizeScreenTestCase.swift in Sources */,
 				02E6985B1C415A200065F97C /* ResultScreenTestCase.swift in Sources */,
@@ -759,6 +775,7 @@
 				INFOPLIST_FILE = RandomAll/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
+				OTHER_SWIFT_FLAGS = "$(inherited) \"-D\" \"COCOAPODS\" \"-D\" \"DEBUG\"";
 				PRODUCT_BUNDLE_IDENTIFIER = com.eastagile.RandomAll;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 			};

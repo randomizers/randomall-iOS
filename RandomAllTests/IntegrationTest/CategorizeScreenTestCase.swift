@@ -12,7 +12,7 @@ class CategorizeScreenTestCase: BaseTestCase {
 
   override func beforeEach() {
     super.beforeEach()
-    tester.tapViewWithAccessibilityLabel("Players")
+    tester.tapViewWithAccessibilityLabel("Teams")
   }
 
   func testElements() {

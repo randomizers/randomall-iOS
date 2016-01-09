@@ -29,6 +29,7 @@ class SubmitCell: UITableViewCell {
   }
 
   override func setHighlighted(highlighted: Bool, animated: Bool) {}
+  override func setSelected(selected: Bool, animated: Bool) {}
 }
 
 @objc protocol SubmitCellDelegate {

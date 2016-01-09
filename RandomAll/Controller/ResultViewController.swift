@@ -13,7 +13,7 @@ class ResultViewController: BaseViewController, SaveResultViewControllerDelegate
 
   let saveResultController = SaveResultViewController()
 
-  var data = Result()
+  var data = RandomResult()
 
   class func instantiateStoryboard() -> ResultViewController {
     return Helper.Storyboard.main().instantiateViewControllerWithIdentifier("ResultViewController") as! ResultViewController
@@ -54,7 +54,7 @@ class ResultViewController: BaseViewController, SaveResultViewControllerDelegate
 
   func saveResult(name name:String) {
     if data.id == 0 {
-      data.id = Result.nextId()
+      data.id = RandomResult.nextId()
       data.name = name
       data.write()
     }

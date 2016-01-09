@@ -10,7 +10,7 @@ import UIKit
 
 class HistoryController: BaseViewController {
   @IBOutlet weak var tableView: UITableView!
-  var data = [Result]()
+  var data = [RandomResult]()
 
   class func instantiateStoryboard() -> HistoryController {
     return Helper.Storyboard.main().instantiateViewControllerWithIdentifier("HistoryController") as! HistoryController
@@ -26,7 +26,7 @@ class HistoryController: BaseViewController {
 
   func loadData() {
     self.data.removeAll()
-    self.data.appendContentsOf(Result.all())
+    self.data.appendContentsOf(RandomResult.all())
   }
 }
 
@@ -46,7 +46,7 @@ extension HistoryController: UITableViewDelegate, UITableViewDataSource {
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
     let cell = tableView.dequeueReusableCellWithIdentifier("ResultCell") as! ResultCell
-    let result = self.data[indexPath.section]
+    let result = self.data[indexPath.row]
     cell.nameLabel.text = result.name
     return cell
   }
