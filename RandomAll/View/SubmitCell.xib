@@ -94,6 +94,7 @@
                 <outlet property="numberOfTeamTextField" destination="Iqt-Du-xT3" id="Vzh-EY-mqI"/>
                 <outlet property="participantsLabel" destination="aZk-oA-roP" id="6TH-pA-haH"/>
                 <outlet property="randomizeButton" destination="dHc-hG-eXz" id="c9J-Su-SWy"/>
+                <outlet property="titleLabel" destination="vdy-fg-9xk" id="Jqv-qx-zv0"/>
             </connections>
             <point key="canvasLocation" x="155" y="430.5"/>
         </tableViewCell>

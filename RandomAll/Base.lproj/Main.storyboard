@@ -60,7 +60,7 @@ to randomize?</string>
                                                 </connections>
                                             </button>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kmk-yn-AEk" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
-                                                <rect key="frame" x="225" y="219" width="150" height="45"/>
+                                                <rect key="frame" x="225" y="221" width="150" height="45"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -74,7 +74,7 @@ to randomize?</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="dvp-dr-llm">
-                                                <rect key="frame" x="8" y="159" width="584" height="58"/>
+                                                <rect key="frame" x="8" y="153" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="4UF-lc-Iga"/>
@@ -86,7 +86,7 @@ their order</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="KN2-35-88p">
-                                                <rect key="frame" x="8" y="278" width="584" height="58"/>
+                                                <rect key="frame" x="8" y="266" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="Awf-vr-SB7"/>
@@ -98,7 +98,7 @@ into different teams</string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="iRM-tF-a35" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
-                                                <rect key="frame" x="225" y="341" width="150" height="45"/>
+                                                <rect key="frame" x="225" y="334" width="150" height="45"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -112,7 +112,7 @@ into different teams</string>
                                                 </connections>
                                             </button>
                                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="w7n-uT-phk">
-                                                <rect key="frame" x="189" y="400" width="223" height="58"/>
+                                                <rect key="frame" x="189" y="379" width="223" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="4vc-Im-iwg"/>
@@ -128,7 +128,7 @@ them into different groups</string>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <constraints>
-                                            <constraint firstItem="dvp-dr-llm" firstAttribute="top" secondItem="gdt-JS-dSD" secondAttribute="bottom" constant="6" id="2Hp-NX-7RR"/>
+                                            <constraint firstItem="dvp-dr-llm" firstAttribute="top" secondItem="gdt-JS-dSD" secondAttribute="bottom" id="2Hp-NX-7RR"/>
                                             <constraint firstItem="KN2-35-88p" firstAttribute="leading" secondItem="RKp-Tx-GYL" secondAttribute="leading" constant="8" id="2l2-7i-Uwh"/>
                                             <constraint firstItem="87a-jk-qMH" firstAttribute="top" secondItem="RKp-Tx-GYL" secondAttribute="top" constant="8" id="3fd-UP-Mpq"/>
                                             <constraint firstItem="iRM-tF-a35" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="DT4-6E-4TZ"/>
@@ -140,11 +140,11 @@ them into different groups</string>
                                             <constraint firstItem="w7n-uT-phk" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="QZC-MU-DIq"/>
                                             <constraint firstAttribute="trailing" secondItem="dvp-dr-llm" secondAttribute="trailing" constant="8" id="Rbq-te-H7G"/>
                                             <constraint firstItem="gdt-JS-dSD" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="U1I-Yi-eUr"/>
-                                            <constraint firstItem="kmk-yn-AEk" firstAttribute="top" secondItem="dvp-dr-llm" secondAttribute="bottom" constant="2" id="Vf6-7z-LLg"/>
+                                            <constraint firstItem="kmk-yn-AEk" firstAttribute="top" secondItem="dvp-dr-llm" secondAttribute="bottom" constant="10" id="Vf6-7z-LLg"/>
                                             <constraint firstItem="KN2-35-88p" firstAttribute="centerX" secondItem="RKp-Tx-GYL" secondAttribute="centerX" id="dUG-W6-8UJ"/>
-                                            <constraint firstItem="KN2-35-88p" firstAttribute="top" secondItem="kmk-yn-AEk" secondAttribute="bottom" constant="14" id="dkJ-Nr-zLi"/>
-                                            <constraint firstItem="iRM-tF-a35" firstAttribute="top" secondItem="KN2-35-88p" secondAttribute="bottom" constant="5" id="hqk-id-nln"/>
-                                            <constraint firstItem="w7n-uT-phk" firstAttribute="top" secondItem="iRM-tF-a35" secondAttribute="bottom" constant="14" id="on9-bm-Da9"/>
+                                            <constraint firstItem="KN2-35-88p" firstAttribute="top" secondItem="kmk-yn-AEk" secondAttribute="bottom" id="dkJ-Nr-zLi"/>
+                                            <constraint firstItem="iRM-tF-a35" firstAttribute="top" secondItem="KN2-35-88p" secondAttribute="bottom" constant="10" id="hqk-id-nln"/>
+                                            <constraint firstItem="w7n-uT-phk" firstAttribute="top" secondItem="iRM-tF-a35" secondAttribute="bottom" id="on9-bm-Da9"/>
                                             <constraint firstAttribute="trailing" secondItem="87a-jk-qMH" secondAttribute="trailing" constant="20" id="vRY-w6-Ste"/>
                                             <constraint firstItem="87a-jk-qMH" firstAttribute="leading" secondItem="RKp-Tx-GYL" secondAttribute="leading" constant="20" id="zxh-Mb-OAN"/>
                                         </constraints>
@@ -466,20 +466,11 @@ categorize?</string>
                                 </constraints>
                             </imageView>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="44" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="jIp-s3-8ts">
-                                <rect key="frame" x="0.0" y="0.0" width="600" height="430"/>
+                                <rect key="frame" x="0.0" y="39" width="600" height="391"/>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-ra-JNn" customClass="RoundButton" customModule="RandomAll" customModuleProvider="target">
-                                <rect key="frame" x="446" y="450" width="109" height="43"/>
-                                <animations/>
-                                <color key="backgroundColor" red="0.18431372549019609" green="0.51764705882352935" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
-                                <state key="normal" title="Edit"/>
-                                <connections>
-                                    <action selector="editButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="vd2-pS-gif"/>
-                                </connections>
-                            </button>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JFn-m7-4Rd" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
                                 <rect key="frame" x="45" y="450" width="109" height="43"/>
                                 <animations/>
@@ -493,28 +484,82 @@ categorize?</string>
                                     <action selector="saveButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="ceV-OH-Swp"/>
                                 </connections>
                             </button>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="M8o-lV-hQh" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                <rect key="frame" x="45" y="450" width="109" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="109" id="9fq-1e-LVL"/>
+                                    <constraint firstAttribute="height" constant="43" id="z8V-TA-dLZ"/>
+                                </constraints>
+                                <state key="normal" title="Re-use"/>
+                                <connections>
+                                    <action selector="reuseButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="2IC-s5-bQ6"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ZVH-ra-JNn" customClass="RoundButton" customModule="RandomAll" customModuleProvider="target">
+                                <rect key="frame" x="446" y="450" width="109" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.18431372549019609" green="0.51764705882352935" blue="0.44313725490196076" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Edit"/>
+                                <connections>
+                                    <action selector="editButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="vd2-pS-gif"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Teams" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xHA-Gc-nEI">
+                                <rect key="frame" x="28" y="0.0" width="544" height="36"/>
+                                <animations/>
+                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
+                                <color key="textColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Uz7-pV-4ve" customClass="RoundButton" customModule="RandomAll" customModuleProvider="target">
+                                <rect key="frame" x="446" y="450" width="109" height="43"/>
+                                <animations/>
+                                <color key="backgroundColor" red="0.92156862745098034" green="0.45490196078431372" blue="0.17254901960784313" alpha="1" colorSpace="calibratedRGB"/>
+                                <state key="normal" title="Delete"/>
+                                <connections>
+                                    <action selector="deleteButtonClicked:" destination="PzF-Fz-HNd" eventType="touchUpInside" id="OuQ-jU-2x9"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <animations/>
                         <color key="backgroundColor" red="0.35294117650000001" green="0.75686274509999996" blue="0.65098039220000004" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
+                            <constraint firstItem="Uz7-pV-4ve" firstAttribute="height" secondItem="ZVH-ra-JNn" secondAttribute="height" id="0cM-On-NIU"/>
+                            <constraint firstItem="M8o-lV-hQh" firstAttribute="width" secondItem="JFn-m7-4Rd" secondAttribute="width" id="5aW-Ee-0Ub"/>
                             <constraint firstItem="ZVH-ra-JNn" firstAttribute="height" secondItem="JFn-m7-4Rd" secondAttribute="height" id="9gb-Tw-cHs"/>
                             <constraint firstItem="JFn-m7-4Rd" firstAttribute="top" secondItem="jIp-s3-8ts" secondAttribute="bottom" constant="20" id="BUw-40-fxp"/>
-                            <constraint firstItem="jIp-s3-8ts" firstAttribute="top" secondItem="H7E-4I-ZfU" secondAttribute="top" id="DI8-I4-2GJ"/>
                             <constraint firstAttribute="trailing" secondItem="jIp-s3-8ts" secondAttribute="trailing" id="GlG-Uf-BVD"/>
+                            <constraint firstItem="jIp-s3-8ts" firstAttribute="top" secondItem="xHA-Gc-nEI" secondAttribute="bottom" constant="3" id="Hk9-wd-RuF"/>
                             <constraint firstAttribute="trailingMargin" secondItem="ZVH-ra-JNn" secondAttribute="trailing" constant="25" id="Lfb-q2-4k6"/>
                             <constraint firstItem="jIp-s3-8ts" firstAttribute="leading" secondItem="H7E-4I-ZfU" secondAttribute="leading" id="MWV-3r-8k2"/>
                             <constraint firstItem="ZVH-ra-JNn" firstAttribute="width" secondItem="JFn-m7-4Rd" secondAttribute="width" id="Rzb-zr-rIa"/>
+                            <constraint firstItem="Uz7-pV-4ve" firstAttribute="top" secondItem="ZVH-ra-JNn" secondAttribute="top" id="T9x-r0-Ou6"/>
+                            <constraint firstItem="xHA-Gc-nEI" firstAttribute="top" secondItem="H7E-4I-ZfU" secondAttribute="topMargin" id="Tgw-dl-abk"/>
+                            <constraint firstItem="M8o-lV-hQh" firstAttribute="leading" secondItem="JFn-m7-4Rd" secondAttribute="leading" id="VlL-AA-Ka8"/>
+                            <constraint firstItem="Uz7-pV-4ve" firstAttribute="width" secondItem="ZVH-ra-JNn" secondAttribute="width" id="eSV-PW-wMe"/>
+                            <constraint firstItem="M8o-lV-hQh" firstAttribute="height" secondItem="JFn-m7-4Rd" secondAttribute="height" id="gXs-x7-iAf"/>
+                            <constraint firstItem="Uz7-pV-4ve" firstAttribute="leading" secondItem="ZVH-ra-JNn" secondAttribute="leading" id="jtu-mw-mt1"/>
                             <constraint firstAttribute="trailing" secondItem="Ff6-DT-AS9" secondAttribute="trailing" id="oJN-La-CbW"/>
                             <constraint firstItem="ZVH-ra-JNn" firstAttribute="centerY" secondItem="JFn-m7-4Rd" secondAttribute="centerY" id="oKP-ql-0uA"/>
                             <constraint firstItem="rjN-Ky-TkI" firstAttribute="top" secondItem="Ff6-DT-AS9" secondAttribute="bottom" id="qCt-yU-F8n"/>
                             <constraint firstItem="rjN-Ky-TkI" firstAttribute="top" secondItem="jIp-s3-8ts" secondAttribute="bottom" constant="170" id="qcY-cS-wqW"/>
                             <constraint firstItem="JFn-m7-4Rd" firstAttribute="leading" secondItem="H7E-4I-ZfU" secondAttribute="leadingMargin" constant="25" id="uFA-pV-0kd"/>
+                            <constraint firstItem="M8o-lV-hQh" firstAttribute="top" secondItem="JFn-m7-4Rd" secondAttribute="top" id="wvy-r0-fVb"/>
+                            <constraint firstItem="xHA-Gc-nEI" firstAttribute="leading" secondItem="H7E-4I-ZfU" secondAttribute="leadingMargin" constant="8" id="yM6-Ly-wsP"/>
+                            <constraint firstAttribute="trailingMargin" secondItem="xHA-Gc-nEI" secondAttribute="trailing" constant="8" id="zRW-6g-ZaI"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Randomizer" id="XpQ-a5-sBD">
                         <barButtonItem key="backBarButtonItem" title=" " id="ACp-8u-sE6"/>
                     </navigationItem>
                     <connections>
+                        <outlet property="deleteButton" destination="Uz7-pV-4ve" id="99c-zm-26V"/>
+                        <outlet property="editButton" destination="ZVH-ra-JNn" id="bXR-6N-lGW"/>
+                        <outlet property="resultNameLabel" destination="xHA-Gc-nEI" id="LrP-lH-tcG"/>
+                        <outlet property="reuseButton" destination="M8o-lV-hQh" id="Kxu-ff-aiH"/>
+                        <outlet property="saveButton" destination="JFn-m7-4Rd" id="wSC-Hk-kKm"/>
                         <outlet property="tableView" destination="jIp-s3-8ts" id="KQF-ha-Zz4"/>
                     </connections>
                 </viewController>

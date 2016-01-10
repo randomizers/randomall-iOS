@@ -25,6 +25,12 @@ class BaseModel: Object {
     completion?()
   }
 
+  func delete() {
+    let realm = try! Realm()
+    try! realm.write {
+      realm.delete(self)
+    }
+  }
   class func nextId() -> Int {
     if let item = try! Realm().objects(self).last {
       return item.valueForKey("id") as! Int + 1

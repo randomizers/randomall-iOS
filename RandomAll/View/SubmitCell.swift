@@ -12,6 +12,7 @@ class SubmitCell: UITableViewCell {
   @IBOutlet weak var participantsLabel: UILabel!
   @IBOutlet weak var numberOfTeamTextField: RoundTextField!
   @IBOutlet weak var randomizeButton: UIButton!
+  @IBOutlet weak var titleLabel: UILabel!
 
   weak var delegate: SubmitCellDelegate?
 

@@ -180,6 +180,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
     } else if indexPath.section == 3 {
       let cell = tableView.dequeueReusableCellWithIdentifier("SubmitCell") as! SubmitCell
       cell.participantsLabel.text = "\(self.data.count) participants"
+      cell.titleLabel.text = self.gameType == .Groups ? "Number of Groups" : "Number of Teams"
       if self.gameType == .Players {
         cell.numberOfTeamTextField.enabled = false
         cell.numberOfTeamTextField.text = "1"
@@ -209,6 +210,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
       for player in self.data {
         if player.name == name {
           UIAlertView(title: "Error", message: "Name is exist!", delegate: nil, cancelButtonTitle: "OK").show()
+          cell.nameTextField.becomeFirstResponder()
           return
         }
       }
@@ -218,14 +220,17 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
       player.seed = Int(seed) ?? 0
       player.write()
       self.data.append(player)
-      self.tableView.reloadData()
+      self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.data.count - 1, inSection: 2)], withRowAnimation: UITableViewRowAnimation.Fade)
+      cell.nameTextField.text = ""
+      cell.nameTextField.becomeFirstResponder()
     }
   }
 
   func cellDidSubmit(cell cell: SubmitCell) {
-    print(cell.numberOfTeamTextField.text)
     self.numberOfTeams = Int(cell.numberOfTeamTextField.text!) ?? 1
     let result = RandomizerService.randomize(self.data, numberOfTeams: self.numberOfTeams, categorizeType: self.categorizeType)
+    result.gameTypeValue = gameType.rawValue
+    result.categorizeTypeValue = categorizeType.rawValue
     let controller = ResultViewController.instantiateStoryboard()
     controller.data = result
     self.navigationController?.pushViewController(controller, animated: true)

@@ -10,6 +10,11 @@ import UIKit
 
 class ResultViewController: BaseViewController, SaveResultViewControllerDelegate {
   @IBOutlet weak var tableView: UITableView!
+  @IBOutlet weak var resultNameLabel: UILabel!
+  @IBOutlet weak var saveButton: BlueTypeButton!
+  @IBOutlet weak var reuseButton: BlueTypeButton!
+  @IBOutlet weak var editButton: RoundButton!
+  @IBOutlet weak var deleteButton: RoundButton!
 
   let saveResultController = SaveResultViewController()
 
@@ -22,34 +27,41 @@ class ResultViewController: BaseViewController, SaveResultViewControllerDelegate
   override func viewDidLoad() {
     super.viewDidLoad()
     saveResultController.delegate = self
-    tableView.registerNib(UINib(nibName: "ResultCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ResultCell")
+    tableView.registerNib(UINib(nibName: "DataCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "DataCell")
     tableView.delegate = self
     tableView.dataSource = self
+    resultNameLabel.text = data.displayName()
     setupUI()
   }
 
-  override func setupUI() {
-    super.setupUI()
-    var frame = CGRect(x: 0, y: 0, width: 100, height: 40)
-    let tableHeaderView = UIView(frame: frame)
-    tableHeaderView.backgroundColor = UIColor.clearColor()
-    frame.origin.x += 10
-    frame.size.width -= 10
-    let label = UILabel(frame: frame)
-    label.autoresizingMask = [UIViewAutoresizing.FlexibleWidth, UIViewAutoresizing.FlexibleHeight]
-    tableHeaderView.addSubview(label)
-    label.text = "Teams"
-    label.font = UIFont.systemFontOfSize(30)
-    label.textColor = UIColor.whiteColor()
-    tableView.tableHeaderView = tableHeaderView
+  override func viewWillAppear(animated: Bool) {
+    super.viewWillAppear(animated)
+    let show = self.data.id == 0
+    reuseButton.hidden = show
+    deleteButton.hidden = show
+    saveButton.hidden = !show
+    editButton.hidden = !show
   }
 
   @IBAction func saveButtonClicked(sender: UIButton) {
     saveResultController.show(self.view)
   }
 
+  @IBAction func reuseButtonClicked(sender: UIButton) {
+    let controller = NewRandomizeViewController.instantiateStoryboard()
+    controller.gameType = self.data.gameType()
+    controller.categorizeType = self.data.categorizeType()
+    controller.data = self.data.players()
+    self.navigationController?.pushViewController(controller, animated: true)
+  }
+
   @IBAction func editButtonClicked(sender: UIButton) {
     self.navigationController?.popViewControllerAnimated(true)
+  }
+
+  @IBAction func deleteButtonClicked(sender: UIButton) {
+    self.navigationController?.popToRootViewControllerAnimated(true)
+    self.data.delete()
   }
 
   func saveResult(name name:String) {
@@ -57,6 +69,7 @@ class ResultViewController: BaseViewController, SaveResultViewControllerDelegate
       data.id = RandomResult.nextId()
       data.name = name
       data.write()
+      resultNameLabel.text = data.name
     }
   }
 }
@@ -75,6 +88,21 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
     return 30
   }
 
+  func tableView(tableView: UITableView, willDisplayCell cell: UITableViewCell, forRowAtIndexPath indexPath: NSIndexPath) {
+    cell.alpha = 0
+    var position = 0 + indexPath.row + 1
+    var s = indexPath.section
+    while s > 0 {
+      s--
+      position += self.data.teams[s].players.count
+    }
+    let duration = 0.2
+    let delay = (duration - 0.05) * Double(position - 1 )
+    UIView.animateWithDuration(duration, delay: delay, options: UIViewAnimationOptions.CurveEaseInOut, animations: { () -> Void in
+      cell.alpha = 1
+      }, completion: nil)
+  }
+
   func tableView(tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
     var frame = CGRect(x: 0, y: 0, width: 100, height: 20)
     let headerView = UIView(frame: frame)
@@ -84,17 +112,18 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
     let label = UILabel(frame: frame)
     label.autoresizingMask = [UIViewAutoresizing.FlexibleHeight, UIViewAutoresizing.FlexibleWidth]
     headerView .addSubview(label)
-    label.text = "Team \(section + 1)"
+    label.text = self.data.gameType() == .Groups ? "Group \(section + 1)" : "Team \(section + 1)"
     label.font = UIFont.systemFontOfSize(20)
     label.textColor = UIColor.whiteColor()
     return headerView
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("ResultCell") as! ResultCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("DataCell") as! DataCell
     let team = self.data.teams[indexPath.section]
     let player = team.players[indexPath.row]
     cell.nameLabel.text = player.name
+    cell.seedLabel.text = player.seedString()
     return cell
   }
 }
