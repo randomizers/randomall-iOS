@@ -20,6 +20,7 @@ class ResultScreenTestCase: BaseTestCase {
     self.addPlayers()
     let tableView = tester.waitForViewWithAccessibilityLabel("tableView") as! UITableView
     tableView.scrollToRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 3), atScrollPosition: UITableViewScrollPosition.Bottom, animated: true)
+    tester.clearTextFromAndThenEnterText("2", intoViewWithAccessibilityLabel: "SubmitCell - number of teams")
     tapSubmitButton()
   }
 

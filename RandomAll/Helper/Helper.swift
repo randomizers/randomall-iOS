@@ -18,10 +18,6 @@ class Helper {
     #endif
     return false
   }
-
-  class func rootViewController() -> UIViewController? {
-    return UIApplication.sharedApplication().delegate!.window??.rootViewController
-  }
 }
 
 func currentApplicationVersion() -> Int {

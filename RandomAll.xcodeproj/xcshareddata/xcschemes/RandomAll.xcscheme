@@ -59,9 +59,6 @@
                <Test
                   Identifier = "BaseTestCase">
                </Test>
-               <Test
-                  Identifier = "SampleUnitTest">
-               </Test>
             </SkippedTests>
          </TestableReference>
       </Testables>

@@ -24,10 +24,23 @@ class HistoryScreenTestCase: BaseTestCase {
   }
 
   func testViewHistory() {
-    tester.tapViewWithAccessibilityLabel("Alpha")
+    tester.tapRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), inTableViewWithAccessibilityIdentifier: "HistoryController - tableView")
     tester.waitForViewWithAccessibilityLabel("Nam")
     tester.waitForViewWithAccessibilityLabel("Vu")
   }
+
+  func testReuseHistory() {
+    tester.tapRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), inTableViewWithAccessibilityIdentifier: "HistoryController - tableView")
+    tester.tapViewWithAccessibilityLabel("Re-use")
+    tester.waitForViewWithAccessibilityLabel("+Add")
+  }
+
+  func testDeleteHistory() {
+    tester.tapRowAtIndexPath(NSIndexPath(forRow: 0, inSection: 0), inTableViewWithAccessibilityIdentifier: "HistoryController - tableView")
+    tester.tapViewWithAccessibilityLabel("Delete")
+    tester.waitForViewWithAccessibilityLabel("How do you want\nto randomize?");
+  }
+
 
   func initResults() {
     let players = initPlayers()

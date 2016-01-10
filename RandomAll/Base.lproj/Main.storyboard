@@ -556,10 +556,10 @@ participants having total similar strength.</string>
             </objects>
             <point key="canvasLocation" x="3157" y="433"/>
         </scene>
-        <!--ResultViewController-->
+        <!--HistoryController-->
         <scene sceneID="pBj-88-u7y">
             <objects>
-                <viewController storyboardIdentifier="HistoryController" title="Randomizer" id="5G7-pi-AEy" userLabel="ResultViewController" customClass="HistoryController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="HistoryController" title="Randomizer" id="5G7-pi-AEy" userLabel="HistoryController" customClass="HistoryController" customModule="RandomAll" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="IYf-NK-ZjM"/>
                         <viewControllerLayoutGuide type="bottom" id="azx-Ar-cr0"/>
@@ -581,6 +581,9 @@ participants having total similar strength.</string>
                                 <animations/>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <color key="sectionIndexBackgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="string" keyPath="accessibilityIdentifier" value="HistoryController - tableView"/>
+                                </userDefinedRuntimeAttributes>
                             </tableView>
                         </subviews>
                         <animations/>

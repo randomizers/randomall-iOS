@@ -31,6 +31,7 @@
                                 <rect key="frame" x="0.0" y="60" width="304" height="43"/>
                                 <animations/>
                                 <color key="backgroundColor" red="0.77647058820000003" green="0.91372549020000005" blue="0.87843137250000003" alpha="1" colorSpace="calibratedRGB"/>
+                                <accessibility key="accessibilityConfiguration" label="SubmitCell - number of teams"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="43" id="9OH-if-2sp"/>
                                 </constraints>
