@@ -7,7 +7,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
         <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
-        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="ResultCell" customModule="RandomAll" customModuleProvider="target">
+        <tableViewCell contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" id="KGk-i7-Jjw" customClass="HistoryCell" customModule="RandomAll" customModuleProvider="target">
             <rect key="frame" x="0.0" y="0.0" width="320" height="44"/>
             <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
             <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" tableViewCell="KGk-i7-Jjw" id="H2p-sc-9uM">
@@ -18,9 +18,19 @@
                         <rect key="frame" x="8" y="0.0" width="312" height="43"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wQe-X5-LUx">
-                                <rect key="frame" x="0.0" y="0.0" width="312" height="43"/>
+                                <rect key="frame" x="0.0" y="0.0" width="197" height="43"/>
                                 <animations/>
                                 <fontDescription key="fontDescription" type="system" weight="light" pointSize="17"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="2016-12-11" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="fg4-dk-Cm3">
+                                <rect key="frame" x="202" y="0.0" width="102" height="43"/>
+                                <animations/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="102" id="ebN-xt-Z0K"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" weight="light" pointSize="13"/>
                                 <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
@@ -28,10 +38,15 @@
                         <animations/>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                         <constraints>
-                            <constraint firstAttribute="trailing" secondItem="wQe-X5-LUx" secondAttribute="trailing" id="Nxg-OS-ygt"/>
+                            <constraint firstAttribute="trailing" secondItem="fg4-dk-Cm3" secondAttribute="trailing" constant="8" id="CmW-uV-QKL"/>
+                            <constraint firstItem="wQe-X5-LUx" firstAttribute="top" secondItem="a3J-jj-BDY" secondAttribute="top" id="JEt-dh-hoV"/>
+                            <constraint firstAttribute="bottom" secondItem="fg4-dk-Cm3" secondAttribute="bottom" id="MoC-bc-yw1"/>
+                            <constraint firstItem="fg4-dk-Cm3" firstAttribute="leading" secondItem="wQe-X5-LUx" secondAttribute="trailing" constant="5" id="Ptr-dK-J4S"/>
                             <constraint firstAttribute="bottom" secondItem="wQe-X5-LUx" secondAttribute="bottom" id="QZR-T0-djM"/>
+                            <constraint firstAttribute="bottom" secondItem="wQe-X5-LUx" secondAttribute="bottom" id="a4h-kO-2RV"/>
                             <constraint firstItem="wQe-X5-LUx" firstAttribute="top" secondItem="a3J-jj-BDY" secondAttribute="top" id="dDs-ym-AKl"/>
-                            <constraint firstItem="wQe-X5-LUx" firstAttribute="leading" secondItem="a3J-jj-BDY" secondAttribute="leading" id="t7H-WH-oeQ"/>
+                            <constraint firstItem="fg4-dk-Cm3" firstAttribute="top" secondItem="a3J-jj-BDY" secondAttribute="top" id="dvZ-cn-Vh3"/>
+                            <constraint firstItem="wQe-X5-LUx" firstAttribute="leading" secondItem="a3J-jj-BDY" secondAttribute="leading" id="tYl-dJ-mzB"/>
                         </constraints>
                     </view>
                 </subviews>
@@ -47,6 +62,7 @@
             <animations/>
             <color key="backgroundColor" red="0.77647058823529413" green="0.9137254901960784" blue="0.8784313725490196" alpha="1" colorSpace="calibratedRGB"/>
             <connections>
+                <outlet property="dateLabel" destination="fg4-dk-Cm3" id="LYH-2B-ns7"/>
                 <outlet property="nameLabel" destination="wQe-X5-LUx" id="Tk0-ZE-hyi"/>
             </connections>
         </tableViewCell>

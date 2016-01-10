@@ -52,6 +52,7 @@ class ResultViewController: BaseViewController, SaveResultViewControllerDelegate
     controller.gameType = self.data.gameType()
     controller.categorizeType = self.data.categorizeType()
     controller.data = self.data.players()
+    controller.numberOfTeams = self.data.teams.count
     self.navigationController?.pushViewController(controller, animated: true)
   }
 
@@ -131,6 +132,6 @@ extension ResultViewController: UITableViewDelegate, UITableViewDataSource {
 extension ResultViewController {
   func saveResultViewController(controller: SaveResultViewController, clickedSaveButton: UIButton) {
     self.saveResult(name: controller.nameTextField.text!)
-    UIAlertView(title: "Save!", message: nil, delegate: nil, cancelButtonTitle: "OK").show()
+    UIAlertView(title: "Saved!", message: nil, delegate: nil, cancelButtonTitle: "OK").show()
   }
 }

@@ -89,7 +89,7 @@ class NewRandomizeViewController: BaseViewController, EditDataViewControllerDele
     let actionSheetController = UIAlertController(title: "Categorize by", message: "", preferredStyle: UIAlertControllerStyle.ActionSheet)
     let closeAction: UIAlertAction = UIAlertAction(title: "Close", style: .Cancel, handler: nil)
     actionSheetController.addAction(closeAction)
-    for type in [CategorizeType.Seed, .Strength, .None] {
+    for type in [CategorizeType.Seed, .None] {
       let action: UIAlertAction = UIAlertAction(title: type.title(), style: .Default) { [weak self] action in
         self?.categorizeType = type
         self?.tableView.reloadData()
@@ -185,6 +185,7 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
         cell.numberOfTeamTextField.enabled = false
         cell.numberOfTeamTextField.text = "1"
       } else {
+        cell.numberOfTeamTextField.text = "\(self.numberOfTeams)"
         cell.numberOfTeamTextField.enabled = true
       }
       cell.delegate = self
@@ -222,7 +223,9 @@ extension NewRandomizeViewController: UITableViewDelegate, UITableViewDataSource
       self.data.append(player)
       self.tableView.insertRowsAtIndexPaths([NSIndexPath(forRow: self.data.count - 1, inSection: 2)], withRowAnimation: UITableViewRowAnimation.Fade)
       cell.nameTextField.text = ""
+      cell.seedTextField.text = ""
       cell.nameTextField.becomeFirstResponder()
+      self.tableView.reloadRowsAtIndexPaths([NSIndexPath(forRow: 0, inSection: 3)], withRowAnimation: UITableViewRowAnimation.None)
     }
   }
 

@@ -267,10 +267,10 @@ categorize?</string>
                                                     <action selector="seedButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="zJG-Vb-LuR"/>
                                                 </connections>
                                             </button>
-                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eD-Ip-RbX" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
-                                                <rect key="frame" x="225" y="219" width="150" height="45"/>
+                                            <button opaque="NO" contentMode="scaleToFill" enabled="NO" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2eD-Ip-RbX" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
+                                                <rect key="frame" x="225" y="221" width="150" height="45"/>
                                                 <animations/>
-                                                <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
+                                                <color key="backgroundColor" red="0.60784313725490191" green="0.60784313725490191" blue="0.60784313725490191" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
                                                     <constraint firstAttribute="width" constant="150" id="2hC-Ew-szP"/>
                                                     <constraint firstAttribute="height" constant="45" id="8jF-1G-5sC"/>
@@ -281,28 +281,32 @@ categorize?</string>
                                                     <action selector="strengthButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="EvZ-XH-jou"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Seed description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-F1-hQW">
-                                                <rect key="frame" x="8" y="159" width="584" height="58"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CAt-F1-hQW">
+                                                <rect key="frame" x="8" y="153" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="bC5-jE-Eoa"/>
                                                 </constraints>
+                                                <string key="text">Participants with the same seed will be
+in different teams/groups.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Strength Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-OQ-5az">
-                                                <rect key="frame" x="8" y="278" width="584" height="58"/>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bWe-OQ-5az">
+                                                <rect key="frame" x="8" y="266" width="584" height="58"/>
                                                 <animations/>
                                                 <constraints>
                                                     <constraint firstAttribute="height" constant="58" id="eGp-hN-GzZ"/>
                                                 </constraints>
+                                                <string key="text">Teams/groups will be randomized with
+participants having total similar strength.</string>
                                                 <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                 <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="5lc-TE-qBO" customClass="BlueTypeButton" customModule="RandomAll" customModuleProvider="target">
-                                                <rect key="frame" x="225" y="341" width="150" height="45"/>
+                                                <rect key="frame" x="225" y="334" width="150" height="45"/>
                                                 <animations/>
                                                 <color key="backgroundColor" red="0.2901960784" green="0.56470588239999997" blue="0.8862745098" alpha="1" colorSpace="calibratedRGB"/>
                                                 <constraints>
@@ -315,17 +319,6 @@ categorize?</string>
                                                     <action selector="noneButtonClicked:" destination="Qtp-5A-F45" eventType="touchUpInside" id="kTm-WP-S5I"/>
                                                 </connections>
                                             </button>
-                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="None Description" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1gF-8X-lJL">
-                                                <rect key="frame" x="189" y="400" width="223" height="58"/>
-                                                <animations/>
-                                                <constraints>
-                                                    <constraint firstAttribute="width" constant="223" id="CXb-YU-H3M"/>
-                                                    <constraint firstAttribute="height" constant="58" id="z5N-bc-Lzq"/>
-                                                </constraints>
-                                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                <color key="textColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="calibratedRGB"/>
-                                                <nil key="highlightedColor"/>
-                                            </label>
                                         </subviews>
                                         <animations/>
                                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
@@ -333,22 +326,19 @@ categorize?</string>
                                             <constraint firstItem="miU-M2-POo" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="20" id="0F9-Gj-n2q"/>
                                             <constraint firstItem="tMx-GS-3ZD" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="0eP-J7-aM2"/>
                                             <constraint firstItem="bWe-OQ-5az" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="2zV-XP-tIO"/>
-                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="top" secondItem="5lc-TE-qBO" secondAttribute="bottom" constant="14" id="3EH-Zb-lBG"/>
                                             <constraint firstItem="2eD-Ip-RbX" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="6hP-aq-MIW"/>
-                                            <constraint firstItem="bWe-OQ-5az" firstAttribute="top" secondItem="2eD-Ip-RbX" secondAttribute="bottom" constant="14" id="6xl-dq-fxz"/>
+                                            <constraint firstItem="bWe-OQ-5az" firstAttribute="top" secondItem="2eD-Ip-RbX" secondAttribute="bottom" id="6xl-dq-fxz"/>
                                             <constraint firstAttribute="trailing" secondItem="miU-M2-POo" secondAttribute="trailing" constant="20" id="CW9-VA-c6U"/>
                                             <constraint firstItem="miU-M2-POo" firstAttribute="top" secondItem="zyi-gi-efk" secondAttribute="top" constant="8" id="FJb-QF-aMu"/>
                                             <constraint firstItem="5lc-TE-qBO" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="Feo-aC-djJ"/>
                                             <constraint firstAttribute="trailing" secondItem="bWe-OQ-5az" secondAttribute="trailing" constant="8" id="G99-jT-YQb"/>
-                                            <constraint firstItem="2eD-Ip-RbX" firstAttribute="top" secondItem="CAt-F1-hQW" secondAttribute="bottom" constant="2" id="L34-qc-cwK"/>
-                                            <constraint firstItem="CAt-F1-hQW" firstAttribute="top" secondItem="tMx-GS-3ZD" secondAttribute="bottom" constant="6" id="MAT-V5-FF1"/>
+                                            <constraint firstItem="2eD-Ip-RbX" firstAttribute="top" secondItem="CAt-F1-hQW" secondAttribute="bottom" constant="10" id="L34-qc-cwK"/>
+                                            <constraint firstItem="CAt-F1-hQW" firstAttribute="top" secondItem="tMx-GS-3ZD" secondAttribute="bottom" id="MAT-V5-FF1"/>
                                             <constraint firstItem="bWe-OQ-5az" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="8" id="UiX-tU-XCu"/>
                                             <constraint firstAttribute="trailing" secondItem="CAt-F1-hQW" secondAttribute="trailing" constant="8" id="W6m-wN-cUC"/>
                                             <constraint firstItem="CAt-F1-hQW" firstAttribute="leading" secondItem="zyi-gi-efk" secondAttribute="leading" constant="8" id="b2L-AW-CHa"/>
-                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="h58-9U-Udy"/>
-                                            <constraint firstItem="1gF-8X-lJL" firstAttribute="centerX" secondItem="zyi-gi-efk" secondAttribute="centerX" id="pDK-c2-DoW"/>
                                             <constraint firstItem="tMx-GS-3ZD" firstAttribute="top" secondItem="miU-M2-POo" secondAttribute="bottom" constant="7" id="pok-1L-2kY"/>
-                                            <constraint firstItem="5lc-TE-qBO" firstAttribute="top" secondItem="bWe-OQ-5az" secondAttribute="bottom" constant="5" id="qoT-91-cvW"/>
+                                            <constraint firstItem="5lc-TE-qBO" firstAttribute="top" secondItem="bWe-OQ-5az" secondAttribute="bottom" constant="10" id="qoT-91-cvW"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -374,7 +364,6 @@ categorize?</string>
                             <constraint firstAttribute="trailing" secondItem="IkT-tu-jti" secondAttribute="trailing" id="WA6-On-7tn"/>
                             <constraint firstItem="IkT-tu-jti" firstAttribute="leading" secondItem="kzG-E4-uaF" secondAttribute="leading" id="h4V-2x-dxF"/>
                             <constraint firstItem="7nG-gE-FBe" firstAttribute="top" secondItem="wBy-Mj-QRA" secondAttribute="bottom" id="hYr-yt-ooP"/>
-                            <constraint firstItem="wBy-Mj-QRA" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="1gF-8X-lJL" secondAttribute="trailing" id="vib-Sk-llf"/>
                         </constraints>
                     </view>
                     <navigationItem key="navigationItem" title="Randomizer" id="Zba-4V-OX0">

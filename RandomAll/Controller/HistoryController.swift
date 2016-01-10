@@ -19,7 +19,7 @@ class HistoryController: BaseViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     loadData()
-    tableView.registerNib(UINib(nibName: "ResultCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "ResultCell")
+    tableView.registerNib(UINib(nibName: "HistoryCell", bundle: NSBundle.mainBundle()), forCellReuseIdentifier: "HistoryCell")
     tableView.delegate = self
     tableView.dataSource = self
   }
@@ -45,9 +45,10 @@ extension HistoryController: UITableViewDelegate, UITableViewDataSource {
   }
 
   func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
-    let cell = tableView.dequeueReusableCellWithIdentifier("ResultCell") as! ResultCell
+    let cell = tableView.dequeueReusableCellWithIdentifier("HistoryCell") as! HistoryCell
     let result = self.data[indexPath.row]
     cell.nameLabel.text = result.name
+    cell.dateLabel.text = Helper.Date.toString(result.createdAt, format: "yyyy-M-d HH:mm")
     return cell
   }
 

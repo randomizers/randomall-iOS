@@ -13,10 +13,11 @@ class RandomResult: BaseModel {
   dynamic var name: String = ""
   dynamic var gameTypeValue: Int = 0
   dynamic var categorizeTypeValue: Int = 0
+  dynamic var createdAt: NSDate = NSDate()
   var teams = List<Team>()
 
   class func all() -> Results<RandomResult> {
-    return try! Realm().objects(RandomResult)
+    return try! Realm().objects(RandomResult).sorted("createdAt", ascending: false)
   }
 
   func players() -> [Player] {
